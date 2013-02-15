@@ -1,0 +1,50 @@
+#include "slam.h"
+#include "ScanToCloud.h"
+
+
+void Slam::initNode(){
+
+    message_filters::Subscriber<nav_msgs::Odometry> subscriberOdom = n.subscribe(n, "odom", 1);
+    message_filters::Subscriber<sensor_msgs::LaserScan> subscriberLaser = n.subscribe(n, "cloud", 1);
+    
+    ros::Publisher publisherResult = n.advertise<geometry_msgs::PointStamped>("pose_gaussian", 50);
+    
+    typedef sync_policies::ExactTime<nav_msgs::Odometry, sensor_msgs::LaserScan> MySyncPolicy;
+    Synchronizer<MySyncPolicy> sync(MySyncPolicy(10), subscriberOdom, subscriberLaser);
+    sync.registerCallback(boost::bind(&slamCallback, _1, _2));
+    
+}
+
+
+void Slam::ekfSlam(sensor_msgs::PointCloud points, nav_msgs::Odometry odom){
+    
+    
+        
+}
+
+
+bool compareFeatures(Feature feat){
+
+    
+
+}
+
+
+void Slam::slamCallback(const nav_msgs::Odometry::ConstPtr& odomMsg, const sensor_msgs::PointCloud::ConstPtr& cloudMsg){
+
+    tf::TransformListener tfListener;
+    sensor_msgs::PointCloud pointsBase;  
+    
+    slam.ekfSlam(*odomMsg, *pointsBase);
+    
+    geometry_msgs::PointStamped pose;
+    pose.header.stamp = cloudMsg->header.stamp;
+    
+    publisherResult.publish(pose);   
+    
+}
+
+
+
+
+

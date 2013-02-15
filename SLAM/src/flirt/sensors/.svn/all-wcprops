@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/data/svn/flirtlib/!svn/ver/1/trunk/src/sensors
+END
+LaserReading.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/data/svn/flirtlib/!svn/ver/1/trunk/src/sensors/LaserReading.cpp
+END
+AbstractReading.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/data/svn/flirtlib/!svn/ver/1/trunk/src/sensors/AbstractReading.h
+END
+LaserReading.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/data/svn/flirtlib/!svn/ver/1/trunk/src/sensors/LaserReading.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/data/svn/flirtlib/!svn/ver/1/trunk/src/sensors/CMakeLists.txt
+END
+AbstractReading.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/data/svn/flirtlib/!svn/ver/1/trunk/src/sensors/AbstractReading.cpp
+END

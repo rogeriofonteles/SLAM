@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/data/svn/flirtlib/!svn/ver/5/trunk/src/utils
+END
+HistogramDistances.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/data/svn/flirtlib/!svn/ver/5/trunk/src/utils/HistogramDistances.h
+END
+HistogramDistances.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/data/svn/flirtlib/!svn/ver/1/trunk/src/utils/HistogramDistances.hpp
+END
+Regression.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/data/svn/flirtlib/!svn/ver/1/trunk/src/utils/Regression.cpp
+END
+SimpleMinMaxPeakFinder.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/data/svn/flirtlib/!svn/ver/5/trunk/src/utils/SimpleMinMaxPeakFinder.h
+END
+SimplePeakFinder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/data/svn/flirtlib/!svn/ver/1/trunk/src/utils/SimplePeakFinder.cpp
+END
+PoseEstimation.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/data/svn/flirtlib/!svn/ver/1/trunk/src/utils/PoseEstimation.cpp
+END
+Convolution.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/data/svn/flirtlib/!svn/ver/1/trunk/src/utils/Convolution.h
+END
+Convolution.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/data/svn/flirtlib/!svn/ver/5/trunk/src/utils/Convolution.hpp
+END
+Regression.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/data/svn/flirtlib/!svn/ver/1/trunk/src/utils/Regression.h
+END
+SimplePeakFinder.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/data/svn/flirtlib/!svn/ver/5/trunk/src/utils/SimplePeakFinder.h
+END
+PoseEstimation.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/data/svn/flirtlib/!svn/ver/1/trunk/src/utils/PoseEstimation.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/data/svn/flirtlib/!svn/ver/1/trunk/src/utils/CMakeLists.txt
+END
+SimpleMinMaxPeakFinder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/data/svn/flirtlib/!svn/ver/1/trunk/src/utils/SimpleMinMaxPeakFinder.cpp
+END
+PeakFinder.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/data/svn/flirtlib/!svn/ver/5/trunk/src/utils/PeakFinder.h
+END

@@ -1,0 +1,21 @@
+<package>
+  <description brief="SLAM">
+
+     SLAM
+
+  </description>
+  <author>ROGERIO</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/SLAM</url>
+  <depend package="nav_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="roscpp"/>
+  <depend package="tf"/>
+  <depend package="pcl"/>
+  <depend package="laser_geometry"/>
+
+</package>
+
+
