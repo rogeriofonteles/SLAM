@@ -32,14 +32,15 @@ class Slam{
         ros::Publisher publisherResult;   
     
         message_filters::Subscriber<geometry_msgs::PoseWithCovarianceStamped> subscriberOdom;
-        message_filters::Subscriber<sensor_msgs::PointCloud> subscriberCloud
+        message_filters::Subscriber<sensor_msgs::PointCloud> subscriberCloud;
         message_filters::Subscriber<sensor_msgs::LaserScan> subscriberLaser;
     
         void initNode();
     
-        void slamCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr&, const sensor_msgs::PointCloud::ConstPtr&);
-        void ekfSlam(sensor_msgs::PointCloud, geometry_msgs::PoseWithCovarianceStamped);
-        bool inverse(const matrix<T>&)
+        void slamCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr&, const sensor_msgs::PointCloud::ConstPtr&, const sensor_msgs::LaserScan::ConstPtr&);
+        void ekfSlam(geometry_msgs::PoseWithCovarianceStamped, sensor_msgs::LaserScan);
+        LaserReading makeLaserReading(geometry_msgs::PoseWithCovarianceStamped, sensor_msgs::LaserScan);
+        matrix<double> inverse(const matrix<double>&);
         
         
     private:
@@ -48,7 +49,7 @@ class Slam{
         geometry_msgs::PoseWithCovarianceStamped pastOdom;
         
         std::vector<InterestPoint*> features;
-        zero_matrix<double> Q;
+        matrix<double> Q;
         
         Gaussian result;
 };

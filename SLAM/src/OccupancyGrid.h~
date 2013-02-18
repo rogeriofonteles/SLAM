@@ -29,7 +29,7 @@ class OccupancyGrid
          float size_x_, size_y_, size_z_;
          float center_x_, center_y_, center_z_;
          float res_x_, res_y_, res_z_;
-         uint32_t *data_;
+         int8_t *data_;
  };
  
  
