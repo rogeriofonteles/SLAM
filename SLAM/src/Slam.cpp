@@ -16,14 +16,21 @@ using namespace boost::numeric::ublas;
 
 Slam::Slam(ros::NodeHandle node){ 
     n = node;
+    
     zero_matrix<double> Q_zero(3,3);
     Q= Q_zero;
-    Q.insert_element(0,0,0.3);    
+    Q.insert_element(0,0,0.3);
+    
+    vector<double> v(3);
+    result.first = v;    
+    
+    zero_matrix<double> m(3,3);
+    result.second = m;
 }
 
 void Slam::initNode(){
 
-    message_filters::Subscriber<geometry_msgs::PoseWithCovarianceStamped> subscriberOdom(n, "robot_pose_ekf/odom", 1);
+    message_filters::Subscriber<geometry_msgs::PoseWithCovarianceStamped> subscriberOdom(n, "robot_pose_ekf/odom_combined", 1);
     message_filters::Subscriber<sensor_msgs::PointCloud> subscriberCloud(n, "/cloud", 1);
     message_filters::Subscriber<sensor_msgs::LaserScan> subscriberLaser(n, "/base_scan", 1);
     
@@ -56,13 +63,23 @@ void Slam::ekfSlam(geometry_msgs::PoseWithCovarianceStamped odom, sensor_msgs::L
     
     result.first[2] = yaw;
     
+    result.second(0,0) = odom.pose.covariance[0];
+    result.second(0,1) = odom.pose.covariance[1];
+    result.second(0,2) = odom.pose.covariance[5];
+    result.second(1,0) = odom.pose.covariance[6];
+    result.second(1,1) = odom.pose.covariance[7];
+    result.second(1,2) = odom.pose.covariance[11];
+    result.second(2,0) = odom.pose.covariance[30];
+    result.second(2,1) = odom.pose.covariance[31];
+    result.second(2,2) = odom.pose.covariance[35];
+    
+    
     rd.detect(lr, featuresCurrent);
     for(std::vector<InterestPoint*>::iterator it=featuresCurrent.begin(); it != featuresCurrent.end(); it++){
         (*it)->setDescriptor(desc.describe((**it), lr));
     }
     
     std::vector<InterestPoint*> featuresNew;
-    int counter_new_features = 1;
     
     result.first.resize(result.first.size() + 3);
     for(int i=1; i<=3; i++)
@@ -160,10 +177,11 @@ void Slam::ekfSlam(geometry_msgs::PoseWithCovarianceStamped odom, sensor_msgs::L
             matrix<double> H(3,3*(features.size()+1));
             H = (1/q)*prod(H_temp,trans(F));
             
-            matrix<double> Psi(3,3);            
-            Psi = prod(prod(H, result.second), trans(H)) + Q;
+            matrix<double> temp_m = prod(H, result.second);
+            matrix<double> Psi = prod(temp_m, trans(H)) + Q;
             
-            matrix<double> pi_temp = prod(prod(trans(z_diff),inverse(Psi)), z_diff);
+            vector<double> temp = prod(z_diff,inverse(Psi));
+            matrix<double> pi_temp = outer_prod(temp,z_diff);
             double pi_curr;
             
             if(counter == features.size()) pi_curr = alpha;
@@ -181,8 +199,8 @@ void Slam::ekfSlam(geometry_msgs::PoseWithCovarianceStamped odom, sensor_msgs::L
 
         result.first.resize(result.first.size() + 3);
         
-        matrix<double> K(result.first.size(), 3);
-        K = prod(prod(result.second, trans(H_real)), inverse(Psi_real));
+        matrix<double> temp_m2 = prod(result.second, trans(H_real));
+        matrix<double> K = prod(temp_m2, inverse(Psi_real));
         
         result.first = result.first + prod(K,z_diff_real);
         result.second = prod((identity_matrix<double>(result.first.size(), 3) - prod(K,H_real)),result.second);
@@ -281,6 +299,7 @@ void Slam::slamCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr
     publisherResult.publish(pose);   
     
 }
+
 
 
 

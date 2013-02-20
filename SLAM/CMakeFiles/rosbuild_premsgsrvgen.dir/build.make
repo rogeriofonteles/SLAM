@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rogerio/ros_workspace/SLAM/SLAM
+CMAKE_SOURCE_DIR = /home/tempestade/Rogerio/SLAM/SLAM
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rogerio/ros_workspace/SLAM/SLAM
+CMAKE_BINARY_DIR = /home/tempestade/Rogerio/SLAM/SLAM
 
 # Utility rule file for rosbuild_premsgsrvgen.
 
@@ -57,6 +57,6 @@ CMakeFiles/rosbuild_premsgsrvgen.dir/clean:
 .PHONY : CMakeFiles/rosbuild_premsgsrvgen.dir/clean
 
 CMakeFiles/rosbuild_premsgsrvgen.dir/depend:
-	cd /home/rogerio/ros_workspace/SLAM/SLAM && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rogerio/ros_workspace/SLAM/SLAM /home/rogerio/ros_workspace/SLAM/SLAM /home/rogerio/ros_workspace/SLAM/SLAM /home/rogerio/ros_workspace/SLAM/SLAM /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles/rosbuild_premsgsrvgen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tempestade/Rogerio/SLAM/SLAM && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tempestade/Rogerio/SLAM/SLAM /home/tempestade/Rogerio/SLAM/SLAM /home/tempestade/Rogerio/SLAM/SLAM /home/tempestade/Rogerio/SLAM/SLAM /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles/rosbuild_premsgsrvgen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rosbuild_premsgsrvgen.dir/depend
 

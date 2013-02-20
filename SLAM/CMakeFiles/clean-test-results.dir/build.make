@@ -35,15 +35,15 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rogerio/ros_workspace/SLAM/SLAM
+CMAKE_SOURCE_DIR = /home/tempestade/Rogerio/SLAM/SLAM
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rogerio/ros_workspace/SLAM/SLAM
+CMAKE_BINARY_DIR = /home/tempestade/Rogerio/SLAM/SLAM
 
 # Utility rule file for clean-test-results.
 
 CMakeFiles/clean-test-results:
-	if ! rm -rf /home/rogerio/.ros/test_results/SLAM; then echo WARNING:\ failed\ to\ remove\ test-results\ directory ; fi
+	if ! rm -rf /home/tempestade/.ros/test_results/SLAM; then echo WARNING:\ failed\ to\ remove\ test-results\ directory ; fi
 
 clean-test-results: CMakeFiles/clean-test-results
 clean-test-results: CMakeFiles/clean-test-results.dir/build.make
@@ -58,6 +58,6 @@ CMakeFiles/clean-test-results.dir/clean:
 .PHONY : CMakeFiles/clean-test-results.dir/clean
 
 CMakeFiles/clean-test-results.dir/depend:
-	cd /home/rogerio/ros_workspace/SLAM/SLAM && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rogerio/ros_workspace/SLAM/SLAM /home/rogerio/ros_workspace/SLAM/SLAM /home/rogerio/ros_workspace/SLAM/SLAM /home/rogerio/ros_workspace/SLAM/SLAM /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles/clean-test-results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tempestade/Rogerio/SLAM/SLAM && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tempestade/Rogerio/SLAM/SLAM /home/tempestade/Rogerio/SLAM/SLAM /home/tempestade/Rogerio/SLAM/SLAM /home/tempestade/Rogerio/SLAM/SLAM /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles/clean-test-results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean-test-results.dir/depend
 

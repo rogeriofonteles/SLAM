@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rogerio/ros_workspace/SLAM/SLAM
+CMAKE_SOURCE_DIR = /home/tempestade/Rogerio/SLAM/SLAM
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rogerio/ros_workspace/SLAM/SLAM
+CMAKE_BINARY_DIR = /home/tempestade/Rogerio/SLAM/SLAM
 
 # Include any dependencies generated for this target.
 include CMakeFiles/slam.dir/depend.make
@@ -71,17 +71,17 @@ CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/stacks/common_rosdeps/manif
 CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/stacks/laser_pipeline/laser_geometry/manifest.xml
 CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/main_slam.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/main_slam.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/main_slam.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/main_slam.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/main_slam.cpp
 
 CMakeFiles/slam.dir/src/main_slam.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/main_slam.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/main_slam.cpp > CMakeFiles/slam.dir/src/main_slam.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/main_slam.cpp > CMakeFiles/slam.dir/src/main_slam.i
 
 CMakeFiles/slam.dir/src/main_slam.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/main_slam.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/main_slam.cpp -o CMakeFiles/slam.dir/src/main_slam.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/main_slam.cpp -o CMakeFiles/slam.dir/src/main_slam.s
 
 CMakeFiles/slam.dir/src/main_slam.o.requires:
 .PHONY : CMakeFiles/slam.dir/src/main_slam.o.requires
@@ -91,6 +91,7 @@ CMakeFiles/slam.dir/src/main_slam.o.provides: CMakeFiles/slam.dir/src/main_slam.
 .PHONY : CMakeFiles/slam.dir/src/main_slam.o.provides
 
 CMakeFiles/slam.dir/src/main_slam.o.provides.build: CMakeFiles/slam.dir/src/main_slam.o
+.PHONY : CMakeFiles/slam.dir/src/main_slam.o.provides.build
 
 CMakeFiles/slam.dir/src/Slam.o: CMakeFiles/slam.dir/flags.make
 CMakeFiles/slam.dir/src/Slam.o: src/Slam.cpp
@@ -114,17 +115,17 @@ CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/stacks/common_rosdeps/manifest.x
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/stacks/laser_pipeline/laser_geometry/manifest.xml
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/Slam.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/Slam.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/Slam.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/Slam.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/Slam.cpp
 
 CMakeFiles/slam.dir/src/Slam.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/Slam.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/Slam.cpp > CMakeFiles/slam.dir/src/Slam.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/Slam.cpp > CMakeFiles/slam.dir/src/Slam.i
 
 CMakeFiles/slam.dir/src/Slam.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/Slam.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/Slam.cpp -o CMakeFiles/slam.dir/src/Slam.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/Slam.cpp -o CMakeFiles/slam.dir/src/Slam.s
 
 CMakeFiles/slam.dir/src/Slam.o.requires:
 .PHONY : CMakeFiles/slam.dir/src/Slam.o.requires
@@ -134,112 +135,21 @@ CMakeFiles/slam.dir/src/Slam.o.provides: CMakeFiles/slam.dir/src/Slam.o.requires
 .PHONY : CMakeFiles/slam.dir/src/Slam.o.provides
 
 CMakeFiles/slam.dir/src/Slam.o.provides.build: CMakeFiles/slam.dir/src/Slam.o
-
-CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o: CMakeFiles/slam.dir/flags.make
-CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o: src/flirt/feature/AbstractFeatureSetMatcher.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/AbstractFeatureSetMatcher.cpp
-
-CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/AbstractFeatureSetMatcher.cpp > CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.i
-
-CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/AbstractFeatureSetMatcher.cpp -o CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.s
-
-CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.requires:
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.requires
-
-CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.provides: CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.requires
-	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.provides.build
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.provides
-
-CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o
-
-CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o: CMakeFiles/slam.dir/flags.make
-CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o: src/flirt/feature/RangeDetector.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/RangeDetector.cpp
-
-CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/RangeDetector.cpp > CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.i
-
-CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/RangeDetector.cpp -o CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.s
-
-CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.requires:
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.requires
-
-CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.provides: CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.requires
-	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.provides.build
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.provides
-
-CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o: CMakeFiles/slam.dir/flags.make
-CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o: src/flirt/feature/NormalEdgeDetector.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/NormalEdgeDetector.cpp
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/NormalEdgeDetector.cpp > CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.i
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/NormalEdgeDetector.cpp -o CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.s
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.requires:
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.requires
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.provides: CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.requires
-	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.provides.build
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.provides
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o
-
-CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o: CMakeFiles/slam.dir/flags.make
-CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o: src/flirt/feature/ShapeContext.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/ShapeContext.cpp
-
-CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/ShapeContext.cpp > CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.i
-
-CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/ShapeContext.cpp -o CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.s
-
-CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.requires:
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.requires
-
-CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.provides: CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.requires
-	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.provides.build
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.provides
-
-CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o
+.PHONY : CMakeFiles/slam.dir/src/Slam.o.provides.build
 
 CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o: CMakeFiles/slam.dir/flags.make
 CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o: src/flirt/feature/MultiScaleDetector.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/MultiScaleDetector.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/MultiScaleDetector.cpp
 
 CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/MultiScaleDetector.cpp > CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/MultiScaleDetector.cpp > CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.i
 
 CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/MultiScaleDetector.cpp -o CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/MultiScaleDetector.cpp -o CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.s
 
 CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o.requires:
 .PHONY : CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o.requires
@@ -249,66 +159,21 @@ CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o.provides: CMakeFiles/
 .PHONY : CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o.provides
 
 CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o
-
-CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o: CMakeFiles/slam.dir/flags.make
-CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o: src/flirt/feature/RansacFeatureSetMatcher.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/RansacFeatureSetMatcher.cpp
-
-CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/RansacFeatureSetMatcher.cpp > CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.i
-
-CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/RansacFeatureSetMatcher.cpp -o CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.s
-
-CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.requires:
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.requires
-
-CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.provides: CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.requires
-	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.provides.build
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.provides
-
-CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o: CMakeFiles/slam.dir/flags.make
-CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o: src/flirt/feature/NormalDetector.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/NormalDetector.cpp
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/NormalDetector.cpp > CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.i
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/NormalDetector.cpp -o CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.s
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.requires:
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.requires
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.provides: CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.requires
-	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.provides.build
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.provides
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o.provides.build
 
 CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o: CMakeFiles/slam.dir/flags.make
 CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o: src/flirt/feature/BetaGrid.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/BetaGrid.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/BetaGrid.cpp
 
 CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/BetaGrid.cpp > CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/BetaGrid.cpp > CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.i
 
 CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/BetaGrid.cpp -o CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/BetaGrid.cpp -o CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.s
 
 CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o.requires:
 .PHONY : CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o.requires
@@ -318,66 +183,21 @@ CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o.provides: CMakeFiles/slam.dir/s
 .PHONY : CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o.provides
 
 CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o
-
-CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o: CMakeFiles/slam.dir/flags.make
-CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o: src/flirt/feature/InterestPoint.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_11)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/InterestPoint.cpp
-
-CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/InterestPoint.cpp > CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.i
-
-CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/InterestPoint.cpp -o CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.s
-
-CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.requires:
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.requires
-
-CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.provides: CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.requires
-	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.provides.build
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.provides
-
-CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o: CMakeFiles/slam.dir/flags.make
-CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o: src/flirt/feature/NormalBlobDetector.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_12)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/NormalBlobDetector.cpp
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/NormalBlobDetector.cpp > CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.i
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/NormalBlobDetector.cpp -o CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.s
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.requires:
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.requires
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.provides: CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.requires
-	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.provides.build
-.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.provides
-
-CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o.provides.build
 
 CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o: CMakeFiles/slam.dir/flags.make
 CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o: src/flirt/feature/RansacMultiFeatureSetMatcher.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/RansacMultiFeatureSetMatcher.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/RansacMultiFeatureSetMatcher.cpp
 
 CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/RansacMultiFeatureSetMatcher.cpp > CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/RansacMultiFeatureSetMatcher.cpp > CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.i
 
 CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/RansacMultiFeatureSetMatcher.cpp -o CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/RansacMultiFeatureSetMatcher.cpp -o CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.s
 
 CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o.requires:
 .PHONY : CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o.requires
@@ -387,20 +207,69 @@ CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o.provides: C
 .PHONY : CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o.provides
 
 CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o.provides.build
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o: CMakeFiles/slam.dir/flags.make
+CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o: src/flirt/feature/NormalDetector.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/NormalDetector.cpp
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/NormalDetector.cpp > CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.i
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/NormalDetector.cpp -o CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.s
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.requires:
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.requires
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.provides: CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.requires
+	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.provides.build
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.provides
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.provides.build
+
+CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o: CMakeFiles/slam.dir/flags.make
+CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o: src/flirt/feature/RansacFeatureSetMatcher.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/RansacFeatureSetMatcher.cpp
+
+CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/RansacFeatureSetMatcher.cpp > CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.i
+
+CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/RansacFeatureSetMatcher.cpp -o CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.s
+
+CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.requires:
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.requires
+
+CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.provides: CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.requires
+	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.provides.build
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.provides
+
+CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.provides.build
 
 CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o: CMakeFiles/slam.dir/flags.make
 CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o: src/flirt/feature/CurvatureDetector.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/CurvatureDetector.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/CurvatureDetector.cpp
 
 CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/CurvatureDetector.cpp > CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/CurvatureDetector.cpp > CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.i
 
 CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/feature/CurvatureDetector.cpp -o CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/CurvatureDetector.cpp -o CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.s
 
 CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o.requires:
 .PHONY : CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o.requires
@@ -410,20 +279,165 @@ CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o.provides: CMakeFiles/s
 .PHONY : CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o.provides
 
 CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o.provides.build
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o: CMakeFiles/slam.dir/flags.make
+CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o: src/flirt/feature/NormalEdgeDetector.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/NormalEdgeDetector.cpp
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/NormalEdgeDetector.cpp > CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.i
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/NormalEdgeDetector.cpp -o CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.s
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.requires:
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.requires
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.provides: CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.requires
+	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.provides.build
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.provides
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.provides.build
+
+CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o: CMakeFiles/slam.dir/flags.make
+CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o: src/flirt/feature/AbstractFeatureSetMatcher.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/AbstractFeatureSetMatcher.cpp
+
+CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/AbstractFeatureSetMatcher.cpp > CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.i
+
+CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/AbstractFeatureSetMatcher.cpp -o CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.s
+
+CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.requires:
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.requires
+
+CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.provides: CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.requires
+	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.provides.build
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.provides
+
+CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.provides.build
+
+CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o: CMakeFiles/slam.dir/flags.make
+CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o: src/flirt/feature/RangeDetector.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/RangeDetector.cpp
+
+CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/RangeDetector.cpp > CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.i
+
+CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/RangeDetector.cpp -o CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.s
+
+CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.requires:
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.requires
+
+CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.provides: CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.requires
+	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.provides.build
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.provides
+
+CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.provides.build
+
+CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o: CMakeFiles/slam.dir/flags.make
+CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o: src/flirt/feature/InterestPoint.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/InterestPoint.cpp
+
+CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/InterestPoint.cpp > CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.i
+
+CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/InterestPoint.cpp -o CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.s
+
+CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.requires:
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.requires
+
+CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.provides: CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.requires
+	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.provides.build
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.provides
+
+CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.provides.build
+
+CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o: CMakeFiles/slam.dir/flags.make
+CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o: src/flirt/feature/ShapeContext.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/ShapeContext.cpp
+
+CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/ShapeContext.cpp > CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.i
+
+CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/ShapeContext.cpp -o CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.s
+
+CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.requires:
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.requires
+
+CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.provides: CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.requires
+	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.provides.build
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.provides
+
+CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.provides.build
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o: CMakeFiles/slam.dir/flags.make
+CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o: src/flirt/feature/NormalBlobDetector.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/NormalBlobDetector.cpp
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/NormalBlobDetector.cpp > CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.i
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/NormalBlobDetector.cpp -o CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.s
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.requires:
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.requires
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.provides: CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.requires
+	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.provides.build
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.provides
+
+CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.provides.build: CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.provides.build
 
 CMakeFiles/slam.dir/src/flirt/geometry/point.o: CMakeFiles/slam.dir/flags.make
 CMakeFiles/slam.dir/src/flirt/geometry/point.o: src/flirt/geometry/point.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/geometry/point.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/geometry/point.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/geometry/point.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/geometry/point.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/geometry/point.cpp
 
 CMakeFiles/slam.dir/src/flirt/geometry/point.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/geometry/point.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/geometry/point.cpp > CMakeFiles/slam.dir/src/flirt/geometry/point.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/geometry/point.cpp > CMakeFiles/slam.dir/src/flirt/geometry/point.i
 
 CMakeFiles/slam.dir/src/flirt/geometry/point.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/geometry/point.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/geometry/point.cpp -o CMakeFiles/slam.dir/src/flirt/geometry/point.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/geometry/point.cpp -o CMakeFiles/slam.dir/src/flirt/geometry/point.s
 
 CMakeFiles/slam.dir/src/flirt/geometry/point.o.requires:
 .PHONY : CMakeFiles/slam.dir/src/flirt/geometry/point.o.requires
@@ -433,20 +447,21 @@ CMakeFiles/slam.dir/src/flirt/geometry/point.o.provides: CMakeFiles/slam.dir/src
 .PHONY : CMakeFiles/slam.dir/src/flirt/geometry/point.o.provides
 
 CMakeFiles/slam.dir/src/flirt/geometry/point.o.provides.build: CMakeFiles/slam.dir/src/flirt/geometry/point.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/geometry/point.o.provides.build
 
 CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o: CMakeFiles/slam.dir/flags.make
 CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o: src/flirt/sensors/LaserReading.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/sensors/LaserReading.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/sensors/LaserReading.cpp
 
 CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/sensors/LaserReading.cpp > CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/sensors/LaserReading.cpp > CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.i
 
 CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/sensors/LaserReading.cpp -o CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/sensors/LaserReading.cpp -o CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.s
 
 CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o.requires:
 .PHONY : CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o.requires
@@ -456,20 +471,21 @@ CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o.provides: CMakeFiles/slam.d
 .PHONY : CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o.provides
 
 CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o.provides.build: CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o.provides.build
 
 CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o: CMakeFiles/slam.dir/flags.make
 CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o: src/flirt/sensors/AbstractReading.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/sensors/AbstractReading.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/sensors/AbstractReading.cpp
 
 CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/sensors/AbstractReading.cpp > CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/sensors/AbstractReading.cpp > CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.i
 
 CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/sensors/AbstractReading.cpp -o CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/sensors/AbstractReading.cpp -o CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.s
 
 CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o.requires:
 .PHONY : CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o.requires
@@ -479,66 +495,21 @@ CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o.provides: CMakeFiles/sla
 .PHONY : CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o.provides
 
 CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o.provides.build: CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o
-
-CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o: CMakeFiles/slam.dir/flags.make
-CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o: src/flirt/utils/SimplePeakFinder.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_18)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/utils/SimplePeakFinder.cpp
-
-CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/utils/SimplePeakFinder.cpp > CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.i
-
-CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/utils/SimplePeakFinder.cpp -o CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.s
-
-CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.requires:
-.PHONY : CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.requires
-
-CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.provides: CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.requires
-	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.provides.build
-.PHONY : CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.provides
-
-CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.provides.build: CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o
-
-CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o: CMakeFiles/slam.dir/flags.make
-CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o: src/flirt/utils/PoseEstimation.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_19)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/utils/PoseEstimation.cpp
-
-CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/utils/PoseEstimation.cpp > CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.i
-
-CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/utils/PoseEstimation.cpp -o CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.s
-
-CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.requires:
-.PHONY : CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.requires
-
-CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.provides: CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.requires
-	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.provides.build
-.PHONY : CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.provides
-
-CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.provides.build: CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o.provides.build
 
 CMakeFiles/slam.dir/src/flirt/utils/Regression.o: CMakeFiles/slam.dir/flags.make
 CMakeFiles/slam.dir/src/flirt/utils/Regression.o: src/flirt/utils/Regression.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/utils/Regression.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/utils/Regression.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/utils/Regression.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/utils/Regression.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/utils/Regression.cpp
 
 CMakeFiles/slam.dir/src/flirt/utils/Regression.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/utils/Regression.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/utils/Regression.cpp > CMakeFiles/slam.dir/src/flirt/utils/Regression.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/utils/Regression.cpp > CMakeFiles/slam.dir/src/flirt/utils/Regression.i
 
 CMakeFiles/slam.dir/src/flirt/utils/Regression.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/utils/Regression.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/utils/Regression.cpp -o CMakeFiles/slam.dir/src/flirt/utils/Regression.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/utils/Regression.cpp -o CMakeFiles/slam.dir/src/flirt/utils/Regression.s
 
 CMakeFiles/slam.dir/src/flirt/utils/Regression.o.requires:
 .PHONY : CMakeFiles/slam.dir/src/flirt/utils/Regression.o.requires
@@ -548,20 +519,69 @@ CMakeFiles/slam.dir/src/flirt/utils/Regression.o.provides: CMakeFiles/slam.dir/s
 .PHONY : CMakeFiles/slam.dir/src/flirt/utils/Regression.o.provides
 
 CMakeFiles/slam.dir/src/flirt/utils/Regression.o.provides.build: CMakeFiles/slam.dir/src/flirt/utils/Regression.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/utils/Regression.o.provides.build
+
+CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o: CMakeFiles/slam.dir/flags.make
+CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o: src/flirt/utils/SimplePeakFinder.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_19)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/utils/SimplePeakFinder.cpp
+
+CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/utils/SimplePeakFinder.cpp > CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.i
+
+CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/utils/SimplePeakFinder.cpp -o CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.s
+
+CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.requires:
+.PHONY : CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.requires
+
+CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.provides: CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.requires
+	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.provides.build
+.PHONY : CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.provides
+
+CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.provides.build: CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.provides.build
+
+CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o: CMakeFiles/slam.dir/flags.make
+CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o: src/flirt/utils/PoseEstimation.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_20)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/utils/PoseEstimation.cpp
+
+CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/utils/PoseEstimation.cpp > CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.i
+
+CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/utils/PoseEstimation.cpp -o CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.s
+
+CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.requires:
+.PHONY : CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.requires
+
+CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.provides: CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.requires
+	$(MAKE) -f CMakeFiles/slam.dir/build.make CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.provides.build
+.PHONY : CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.provides
+
+CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.provides.build: CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.provides.build
 
 CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o: CMakeFiles/slam.dir/flags.make
 CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o: src/flirt/utils/SimpleMinMaxPeakFinder.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/utils/SimpleMinMaxPeakFinder.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o -c /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/utils/SimpleMinMaxPeakFinder.cpp
 
 CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/utils/SimpleMinMaxPeakFinder.cpp > CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/utils/SimpleMinMaxPeakFinder.cpp > CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.i
 
 CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/rogerio/ros_workspace/SLAM/SLAM/src/flirt/utils/SimpleMinMaxPeakFinder.cpp -o CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/utils/SimpleMinMaxPeakFinder.cpp -o CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.s
 
 CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o.requires:
 .PHONY : CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o.requires
@@ -571,29 +591,30 @@ CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o.provides: CMakeFile
 .PHONY : CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o.provides
 
 CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o.provides.build: CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o
+.PHONY : CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o.provides.build
 
 # Object files for target slam
 slam_OBJECTS = \
 "CMakeFiles/slam.dir/src/main_slam.o" \
 "CMakeFiles/slam.dir/src/Slam.o" \
+"CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o" \
+"CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o" \
+"CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o" \
+"CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o" \
+"CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o" \
+"CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o" \
+"CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o" \
 "CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o" \
 "CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o" \
-"CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o" \
-"CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o" \
-"CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o" \
-"CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o" \
-"CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o" \
-"CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o" \
 "CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o" \
+"CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o" \
 "CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o" \
-"CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o" \
-"CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o" \
 "CMakeFiles/slam.dir/src/flirt/geometry/point.o" \
 "CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o" \
 "CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o" \
+"CMakeFiles/slam.dir/src/flirt/utils/Regression.o" \
 "CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o" \
 "CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o" \
-"CMakeFiles/slam.dir/src/flirt/utils/Regression.o" \
 "CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o"
 
 # External object files for target slam
@@ -601,24 +622,24 @@ slam_EXTERNAL_OBJECTS =
 
 bin/slam: CMakeFiles/slam.dir/src/main_slam.o
 bin/slam: CMakeFiles/slam.dir/src/Slam.o
+bin/slam: CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o
+bin/slam: CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o
+bin/slam: CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o
+bin/slam: CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o
+bin/slam: CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o
+bin/slam: CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o
+bin/slam: CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o
 bin/slam: CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o
 bin/slam: CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o
-bin/slam: CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o
-bin/slam: CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o
-bin/slam: CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o
-bin/slam: CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o
-bin/slam: CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o
-bin/slam: CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o
 bin/slam: CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o
+bin/slam: CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o
 bin/slam: CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o
-bin/slam: CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o
-bin/slam: CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o
 bin/slam: CMakeFiles/slam.dir/src/flirt/geometry/point.o
 bin/slam: CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o
 bin/slam: CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o
+bin/slam: CMakeFiles/slam.dir/src/flirt/utils/Regression.o
 bin/slam: CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o
 bin/slam: CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o
-bin/slam: CMakeFiles/slam.dir/src/flirt/utils/Regression.o
 bin/slam: CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o
 bin/slam: CMakeFiles/slam.dir/build.make
 bin/slam: CMakeFiles/slam.dir/link.txt
@@ -631,24 +652,24 @@ CMakeFiles/slam.dir/build: bin/slam
 
 CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/main_slam.o.requires
 CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/Slam.o.requires
+CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o.requires
+CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o.requires
+CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o.requires
+CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.requires
+CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.requires
+CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o.requires
+CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.requires
 CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/AbstractFeatureSetMatcher.o.requires
 CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/RangeDetector.o.requires
-CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/NormalEdgeDetector.o.requires
-CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.requires
-CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/MultiScaleDetector.o.requires
-CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/RansacFeatureSetMatcher.o.requires
-CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/NormalDetector.o.requires
-CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/BetaGrid.o.requires
 CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/InterestPoint.o.requires
+CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/ShapeContext.o.requires
 CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/NormalBlobDetector.o.requires
-CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/RansacMultiFeatureSetMatcher.o.requires
-CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/feature/CurvatureDetector.o.requires
 CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/geometry/point.o.requires
 CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/sensors/LaserReading.o.requires
 CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/sensors/AbstractReading.o.requires
+CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/utils/Regression.o.requires
 CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/utils/SimplePeakFinder.o.requires
 CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/utils/PoseEstimation.o.requires
-CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/utils/Regression.o.requires
 CMakeFiles/slam.dir/requires: CMakeFiles/slam.dir/src/flirt/utils/SimpleMinMaxPeakFinder.o.requires
 .PHONY : CMakeFiles/slam.dir/requires
 
@@ -657,6 +678,6 @@ CMakeFiles/slam.dir/clean:
 .PHONY : CMakeFiles/slam.dir/clean
 
 CMakeFiles/slam.dir/depend:
-	cd /home/rogerio/ros_workspace/SLAM/SLAM && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rogerio/ros_workspace/SLAM/SLAM /home/rogerio/ros_workspace/SLAM/SLAM /home/rogerio/ros_workspace/SLAM/SLAM /home/rogerio/ros_workspace/SLAM/SLAM /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles/slam.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tempestade/Rogerio/SLAM/SLAM && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tempestade/Rogerio/SLAM/SLAM /home/tempestade/Rogerio/SLAM/SLAM /home/tempestade/Rogerio/SLAM/SLAM /home/tempestade/Rogerio/SLAM/SLAM /home/tempestade/Rogerio/SLAM/SLAM/CMakeFiles/slam.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/slam.dir/depend
 
