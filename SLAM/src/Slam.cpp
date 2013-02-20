@@ -66,6 +66,7 @@ void Slam::ekfSlam(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& odo
     
     result.first[2] = yaw;
     
+<<<<<<< HEAD
     result.second(0,0) = odom->pose.covariance[0];
     result.second(0,1) = odom->pose.covariance[1];
     result.second(0,2) = odom->pose.covariance[5];
@@ -75,6 +76,17 @@ void Slam::ekfSlam(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& odo
     result.second(2,0) = odom->pose.covariance[30];
     result.second(2,1) = odom->pose.covariance[31];
     result.second(2,2) = odom->pose.covariance[35];
+=======
+    result.second(0,0) = odom.pose.covariance[0];
+    result.second(0,1) = odom.pose.covariance[1];
+    result.second(0,2) = odom.pose.covariance[5];
+    result.second(1,0) = odom.pose.covariance[6];
+    result.second(1,1) = odom.pose.covariance[7];
+    result.second(1,2) = odom.pose.covariance[11];
+    result.second(2,0) = odom.pose.covariance[30];
+    result.second(2,1) = odom.pose.covariance[31];
+    result.second(2,2) = odom.pose.covariance[35];
+>>>>>>> e35c3d3b88a52e0f624e8776d97f2442dbbe5284
     
     
     rd.detect(lr, featuresCurrent);
@@ -82,6 +94,11 @@ void Slam::ekfSlam(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& odo
         (*it)->setDescriptor(desc.describe((**it), lr));
     }
     
+<<<<<<< HEAD
+=======
+    std::vector<InterestPoint*> featuresNew;
+    
+>>>>>>> e35c3d3b88a52e0f624e8776d97f2442dbbe5284
     result.first.resize(result.first.size() + 3);
     for(int i=1; i<=3; i++)
         result.first(result.first.size()-i) = 0;
@@ -178,8 +195,13 @@ void Slam::ekfSlam(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& odo
             matrix<double> H(3,3*(features.size()+1));
             H = (1/q)*prod(H_temp,trans(F));
             
+<<<<<<< HEAD
             matrix<double> temp_m = prod(H, result.second);
             matrix<double> Psi = prod(temp_m, trans(H)) + Q;
+=======
+            matrix<double> Psi(3,3);            
+            Psi = prod(prod(H, result.second), trans(H) ) + Q;
+>>>>>>> e35c3d3b88a52e0f624e8776d97f2442dbbe5284
             
             vector<double> temp = prod(z_diff,inverse(Psi));
             matrix<double> pi_temp = outer_prod(temp,z_diff);
