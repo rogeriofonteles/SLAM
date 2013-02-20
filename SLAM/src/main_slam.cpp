@@ -10,6 +10,8 @@ int main(int argc, char **argv)
   Slam slam(n);
   slam.initNode();
   
+  ROS_INFO("AAAAAA");
+  
   ros::spin();
 
   return 0;

@@ -9,7 +9,9 @@
 #include "flirt/feature/ShapeContext.h"
 #include "flirt/feature/RangeDetector.h"
 #include <message_filters/subscriber.h>
+#include <message_filters/synchronizer.h>
 #include <message_filters/time_synchronizer.h>
+#include <message_filters/sync_policies/approximate_time.h>
 #include <nav_msgs/Odometry.h>
 #include <geometry_msgs/Point.h>
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
@@ -19,8 +21,10 @@
 #include <utility>
 
 using namespace boost::numeric::ublas;
+using namespace message_filters;
 
 typedef std::pair<vector<double>,matrix<double> > Gaussian;
+typedef sync_policies::ApproximateTime<geometry_msgs::PoseWithCovarianceStamped, sensor_msgs::LaserScan> MySyncPolicy;
 
 class Slam{
 
@@ -31,8 +35,8 @@ class Slam{
         ros::NodeHandle n;
         ros::Publisher publisherResult;   
     
-        message_filters::Subscriber<geometry_msgs::PoseWithCovarianceStamped> subscriberOdom;
-        message_filters::Subscriber<sensor_msgs::LaserScan> subscriberLaser;
+        message_filters::Subscriber<geometry_msgs::PoseWithCovarianceStamped> *subscriberOdom;
+        message_filters::Subscriber<sensor_msgs::LaserScan> *subscriberLaser;
     
         void initNode();
     
@@ -41,8 +45,11 @@ class Slam{
         LaserReading makeLaserReading(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr&, const sensor_msgs::LaserScan::ConstPtr&);
         matrix<double> inverse(const matrix<double>&);
         
+        Synchronizer<MySyncPolicy> *sync;
         
-    private:
+        //TimeSynchronizer<geometry_msgs::PoseWithCovarianceStamped, sensor_msgs::LaserScan> *sync;
+        
+    private:        
         
         std::vector<InterestPoint*> features;
         matrix<double> Q;

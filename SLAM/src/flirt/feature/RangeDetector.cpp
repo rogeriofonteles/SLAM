@@ -1,5 +1,7 @@
 #include "RangeDetector.h"
 #include "../utils/Regression.h"
+#include <iostream>
+#include <ros/ros.h>
 
 
 RangeDetector::RangeDetector(const PeakFinder* peak, unsigned int scales, double sigma, double step, SmoothingFilterFamily filterType):
@@ -34,6 +36,7 @@ void RangeDetector::computeSignal(const LaserReading& reading, std::vector<doubl
 unsigned int RangeDetector::computeInterestPoints(const LaserReading& reading, const std::vector<double>& signal, std::vector<InterestPoint*>& point, 
 						  std::vector< std::vector<unsigned int> >& indexes, std::vector<unsigned int>& maxRangeMapping) const
 {
+
     point.clear();
     point.reserve(reading.getRho().size());
     const std::vector<Point2D>& worldPoints = reading.getWorldCartesian();
@@ -63,6 +66,8 @@ unsigned int RangeDetector::computeInterestPoints(const LaserReading& reading, c
 			pose.y =  (reading.getWorldCartesian()[pointIndex]).y;
 			pose.theta = 0.0;
 			
+			
+			
 			bool exists = false;
 			for(unsigned int k = 0; !exists && k < point.size(); k++){
 				exists = exists || (fabs(pose.x - point[k]->getPosition().x) <= 0.2 &&  fabs(pose.y - point[k]->getPosition().y) <= 0.2);
@@ -84,9 +89,11 @@ unsigned int RangeDetector::computeInterestPoints(const LaserReading& reading, c
 				double distance = sqrt((pose.x - support[k].x)*(pose.x - support[k].x) + (pose.y - support[k].y)*(pose.y - support[k].y));
 				maxDistance = maxDistance < distance ? distance : maxDistance;
 			}
+			
 			InterestPoint *interest = new InterestPoint(pose, maxDistance);
 	// 	    InterestPoint *interest = new InterestPoint(pose, m_scales[i]);
 			interest->setScaleLevel(i);
+			
 			interest->setSupport(support);
 			point.push_back(interest);
 		}

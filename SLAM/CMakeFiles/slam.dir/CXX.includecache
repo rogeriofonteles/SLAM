@@ -29,13 +29,13 @@ message_filters/subscriber.h
 -
 message_filters/synchronizer.h
 -
-message_filters/sync_policies/approximate_time.h
--
 boost/numeric/ublas/vector.hpp
 -
 boost/numeric/ublas/matrix.hpp
 -
 boost/numeric/ublas/lu.hpp
+-
+boost/numeric/ublas/io.hpp
 -
 flirt/utils/SimpleMinMaxPeakFinder.h
 /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/utils/SimpleMinMaxPeakFinder.h
@@ -57,7 +57,11 @@ flirt/feature/RangeDetector.h
 /home/tempestade/Rogerio/SLAM/SLAM/src/flirt/feature/RangeDetector.h
 message_filters/subscriber.h
 -
+message_filters/synchronizer.h
+-
 message_filters/time_synchronizer.h
+-
+message_filters/sync_policies/approximate_time.h
 -
 nav_msgs/Odometry.h
 -
