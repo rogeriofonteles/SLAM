@@ -1,10 +1,11 @@
 #include "Slam.h"
 #include "ScanToCloud.h"
 #include <vector>
+#include <iostream>
 #include <tf/transform_listener.h>
 #include <message_filters/subscriber.h>
 #include <message_filters/synchronizer.h>
-#include <message_filters/sync_policies/exact_time.h>
+#include <message_filters/sync_policies/approximate_time.h>
 #include <boost/numeric/ublas/vector.hpp>
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/lu.hpp>
@@ -30,20 +31,23 @@ Slam::Slam(ros::NodeHandle node){
 
 void Slam::initNode(){
 
-    message_filters::Subscriber<geometry_msgs::PoseWithCovarianceStamped> subscriberOdom(n, "robot_pose_ekf/odom_combined", 1);
-    message_filters::Subscriber<sensor_msgs::PointCloud> subscriberCloud(n, "/cloud", 1);
-    message_filters::Subscriber<sensor_msgs::LaserScan> subscriberLaser(n, "/base_scan", 1);
+    message_filters::Subscriber<geometry_msgs::PoseWithCovarianceStamped> subscriberOdom(n, "robot_pose_ekf/odom", 1);
+    message_filters::Subscriber<sensor_msgs::LaserScan> subscriberLaser(n, "scan", 1);
     
-    publisherResult = n.advertise<geometry_msgs::PointStamped>("pose_corrected", 50);
+    publisherResult = n.advertise<geometry_msgs::PoseWithCovarianceStamped>("pose_corrected", 50);
     
-    typedef sync_policies::ExactTime<geometry_msgs::PoseWithCovarianceStamped, sensor_msgs::PointCloud, sensor_msgs::LaserScan> MySyncPolicy;
-    Synchronizer<MySyncPolicy> sync(MySyncPolicy(10), subscriberOdom, subscriberCloud, subscriberLaser);
-    sync.registerCallback(boost::bind(&Slam::slamCallback, this, _1, _2, _3));
+    typedef sync_policies::ExactTime<geometry_msgs::PoseWithCovarianceStamped, sensor_msgs::LaserScan> MySyncPolicy;
+    Synchronizer<MySyncPolicy> sync(MySyncPolicy(10), subscriberOdom, subscriberLaser);
+    sync.registerCallback(boost::bind(&Slam::slamCallback, this, _1, _2));
+    
+    std::cout << "Inicio" << std::endl;
     
 }
 
 
-void Slam::ekfSlam(geometry_msgs::PoseWithCovarianceStamped odom, sensor_msgs::LaserScan scan){
+void Slam::ekfSlam(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& odom, const sensor_msgs::LaserScan::ConstPtr& scan){
+    
+    std::cout << "Rodando" << std::endl;
     
     SimpleMinMaxPeakFinder peakFinder;    
     LaserReading lr = makeLaserReading(odom, scan);
@@ -52,34 +56,31 @@ void Slam::ekfSlam(geometry_msgs::PoseWithCovarianceStamped odom, sensor_msgs::L
     RangeDetector rd(&peakFinder);
     
     double alpha = 0.3;
-    //TODO Inicializar o RESULT!!!!!!!!!!!!
     
-    result.first[0] = odom.pose.pose.position.x;
-    result.first[1] = odom.pose.pose.position.y;
+    result.first[0] = odom->pose.pose.position.x;
+    result.first[1] = odom->pose.pose.position.y;
     
-    btQuaternion q(odom.pose.pose.orientation.x, odom.pose.pose.orientation.y, odom.pose.pose.orientation.z, odom.pose.pose.orientation.w);
+    btQuaternion q(odom->pose.pose.orientation.x, odom->pose.pose.orientation.y, odom->pose.pose.orientation.z, odom->pose.pose.orientation.w);
     double yaw,pitch,roll;
     btMatrix3x3(q).getEulerYPR(yaw,pitch,roll);
     
     result.first[2] = yaw;
     
-    result.second(0,0) = odom.pose.covariance[0];
-    result.second(0,1) = odom.pose.covariance[1];
-    result.second(0,2) = odom.pose.covariance[5];
-    result.second(1,0) = odom.pose.covariance[6];
-    result.second(1,1) = odom.pose.covariance[7];
-    result.second(1,2) = odom.pose.covariance[11];
-    result.second(2,0) = odom.pose.covariance[30];
-    result.second(2,1) = odom.pose.covariance[31];
-    result.second(2,2) = odom.pose.covariance[35];
+    result.second(0,0) = odom->pose.covariance[0];
+    result.second(0,1) = odom->pose.covariance[1];
+    result.second(0,2) = odom->pose.covariance[5];
+    result.second(1,0) = odom->pose.covariance[6];
+    result.second(1,1) = odom->pose.covariance[7];
+    result.second(1,2) = odom->pose.covariance[11];
+    result.second(2,0) = odom->pose.covariance[30];
+    result.second(2,1) = odom->pose.covariance[31];
+    result.second(2,2) = odom->pose.covariance[35];
     
     
     rd.detect(lr, featuresCurrent);
     for(std::vector<InterestPoint*>::iterator it=featuresCurrent.begin(); it != featuresCurrent.end(); it++){
         (*it)->setDescriptor(desc.describe((**it), lr));
     }
-    
-    std::vector<InterestPoint*> featuresNew;
     
     result.first.resize(result.first.size() + 3);
     for(int i=1; i<=3; i++)
@@ -120,8 +121,8 @@ void Slam::ekfSlam(geometry_msgs::PoseWithCovarianceStamped odom, sensor_msgs::L
         for(std::vector<InterestPoint*>::iterator it=features.begin(); it != features.end(); it++){
         
             vector<double> delta_curr(2);
-            delta_curr[0] = (*it2)->getPosition().x - odom.pose.pose.position.x;
-            delta_curr[1] = (*it2)->getPosition().y - odom.pose.pose.position.y;     
+            delta_curr[0] = (*it2)->getPosition().x - odom->pose.pose.position.x;
+            delta_curr[1] = (*it2)->getPosition().y - odom->pose.pose.position.y;     
             
             double q = inner_prod(delta_curr, delta_curr);
             
@@ -132,8 +133,8 @@ void Slam::ekfSlam(geometry_msgs::PoseWithCovarianceStamped odom, sensor_msgs::L
         
         
             vector<double> delta(2);
-            delta[0] = (*it)->getPosition().x - odom.pose.pose.position.x;
-            delta[1] = (*it)->getPosition().y - odom.pose.pose.position.y;
+            delta[0] = (*it)->getPosition().x - odom->pose.pose.position.x;
+            delta[1] = (*it)->getPosition().y - odom->pose.pose.position.y;
             
             q = inner_prod(delta, delta);
             
@@ -219,24 +220,22 @@ void Slam::ekfSlam(geometry_msgs::PoseWithCovarianceStamped odom, sensor_msgs::L
         }        
         
     }  
-    
-    features.insert(features.end(), featuresNew.begin(), featuresNew.end());
         
 }
 
 
-LaserReading Slam::makeLaserReading(geometry_msgs::PoseWithCovarianceStamped odom, sensor_msgs::LaserScan scan){
+LaserReading Slam::makeLaserReading(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& odom, const sensor_msgs::LaserScan::ConstPtr& scan){
     
-    std::vector<double> scanReading(scan.intensities.begin(),scan.intensities.end());
-    std::vector<double> scanBearing(scan.ranges.begin(), scan.ranges.end());
+    std::vector<double> scanReading(scan->intensities.begin(),scan->intensities.end());
+    std::vector<double> scanBearing(scan->ranges.begin(), scan->ranges.end());
     
     LaserReading lr(scanReading, scanBearing);
     
-    btQuaternion q(odom.pose.pose.orientation.x, odom.pose.pose.orientation.y, odom.pose.pose.orientation.z, odom.pose.pose.orientation.w);
+    btQuaternion q(odom->pose.pose.orientation.x, odom->pose.pose.orientation.y, odom->pose.pose.orientation.z, odom->pose.pose.orientation.w);
     double yaw,pitch,roll;
     btMatrix3x3(q).getEulerYPR(yaw,pitch,roll);
     
-    OrientedPoint2D point(odom.pose.pose.position.x, odom.pose.pose.position.y, yaw);
+    OrientedPoint2D point(odom->pose.pose.position.x, odom->pose.pose.position.y, yaw);
     
     lr.setLaserPose(point);
     
@@ -276,25 +275,24 @@ matrix<double> Slam::inverse(const matrix<double>& input)
 
 
 void Slam::slamCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& odomMsg, 
-                        const sensor_msgs::PointCloud::ConstPtr& cloudMsg,
                         const sensor_msgs::LaserScan::ConstPtr& laserMsg){
 
-    ekfSlam(*odomMsg, *laserMsg);
+    ekfSlam(odomMsg, laserMsg);
     
-    geometry_msgs::PoseStamped pose;
-    pose.header.stamp = cloudMsg->header.stamp;
+    geometry_msgs::PoseWithCovarianceStamped pose;
+    pose.header.stamp = laserMsg->header.stamp;
     
     geometry_msgs::Point p;
     p.x = result.first[0];
     p.y = result.first[1];
     p.z = 0;
-    pose.pose.position = p;
+    pose.pose.pose.position = p;
     
     tf::Quaternion q(cos(result.first[2]/2), 0, 0, sin(result.first[2]/2));
-    pose.pose.orientation.x = q.x();
-    pose.pose.orientation.y = q.y();
-    pose.pose.orientation.z = q.z();
-    pose.pose.orientation.w = q.w();
+    pose.pose.pose.orientation.x = q.x();
+    pose.pose.pose.orientation.y = q.y();
+    pose.pose.pose.orientation.z = q.z();
+    pose.pose.pose.orientation.w = q.w();
     
     publisherResult.publish(pose);   
     

@@ -18,12 +18,6 @@ tf/transform_listener.h
 laser_geometry/laser_geometry.h
 -
 
-/home/tempestade/Rogerio/SLAM/SLAM/src/main_scan_to_cloud.cpp
-ros/ros.h
--
-ScanToCloud.h
-/home/tempestade/Rogerio/SLAM/SLAM/src/ScanToCloud.h
-
 /opt/ros/fuerte/include/XmlRpcDecl.h
 ros/macros.h
 -

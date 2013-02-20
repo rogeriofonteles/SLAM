@@ -7,7 +7,7 @@
 #include <nav_msgs/Odometry.h>
 #include <nav_msgs/OccupancyGrid.h>
 #include <geometry_msgs/Point.h>
-#include <geometry_msgs/PointStamped.h>
+#include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <sensor_msgs/LaserScan.h>
 #include <boost/numeric/ublas/matrix.hpp>
 #include "OccupancyGrid.h"
@@ -26,12 +26,12 @@ class OccupancyGridBuilder{
         ros::NodeHandle n;
         ros::Publisher publisherMap;
     
-        message_filters::Subscriber<geometry_msgs::PointStamped> subscriberPose;
+        message_filters::Subscriber<geometry_msgs::PoseWithCovarianceStamped> subscriberPose;
         message_filters::Subscriber<sensor_msgs::PointCloud> subscriberCloud;
     
         void initNode();
     
-        void occCallback(const geometry_msgs::PointStamped::ConstPtr&, const sensor_msgs::PointCloud::ConstPtr&);
+        void occCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr&, const sensor_msgs::PointCloud::ConstPtr&);
         
         
     private:

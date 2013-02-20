@@ -46,6 +46,7 @@ CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/include/message_filters/signal1.
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/include/message_filters/signal9.h
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/include/message_filters/simple_filter.h
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/include/message_filters/subscriber.h
+CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/include/message_filters/sync_policies/approximate_time.h
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/include/message_filters/sync_policies/exact_time.h
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/include/message_filters/synchronizer.h
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/include/message_filters/time_synchronizer.h

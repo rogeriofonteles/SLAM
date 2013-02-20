@@ -32,21 +32,17 @@ class Slam{
         ros::Publisher publisherResult;   
     
         message_filters::Subscriber<geometry_msgs::PoseWithCovarianceStamped> subscriberOdom;
-        message_filters::Subscriber<sensor_msgs::PointCloud> subscriberCloud;
         message_filters::Subscriber<sensor_msgs::LaserScan> subscriberLaser;
     
         void initNode();
     
-        void slamCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr&, const sensor_msgs::PointCloud::ConstPtr&, const sensor_msgs::LaserScan::ConstPtr&);
-        void ekfSlam(geometry_msgs::PoseWithCovarianceStamped, sensor_msgs::LaserScan);
-        LaserReading makeLaserReading(geometry_msgs::PoseWithCovarianceStamped, sensor_msgs::LaserScan);
+        void slamCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr&, const  sensor_msgs::LaserScan::ConstPtr&);
+        void ekfSlam(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr&, const sensor_msgs::LaserScan::ConstPtr&);
+        LaserReading makeLaserReading(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr&, const sensor_msgs::LaserScan::ConstPtr&);
         matrix<double> inverse(const matrix<double>&);
         
         
     private:
-    
-        sensor_msgs::PointCloud pastCloud;                 
-        geometry_msgs::PoseWithCovarianceStamped pastOdom;
         
         std::vector<InterestPoint*> features;
         matrix<double> Q;

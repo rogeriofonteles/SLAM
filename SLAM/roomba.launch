@@ -7,17 +7,6 @@
     <param name="frame_id" value="base_laser" />
   </node>
   
-  <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
-    <param name="output_frame" value="odom"/>
-    <param name="freq" value="30.0"/>
-    <param name="sensor_timeout" value="1.0"/>
-    <param name="odom_used" value="true"/>
-    <param name="imu_used" value="true"/>
-    <param name="vo_used" value="true"/>
-    <param name="debug" value="false"/>
-    <param name="self_diagnose" value="false"/>
-  </node>
-  
   <node pkg="SLAM" type="laser_to_base" name="laser_to_base" output="screen">
   </node>
   
@@ -28,6 +17,6 @@
   </node>
   
     <node pkg="SLAM" type="slam" name="slam" output="screen">
-  </node>
+  </node> 
   
 </launch>

@@ -2,9 +2,9 @@
 
 ScanToCloud::ScanToCloud(){
 
-    scan_sub_ = node_.subscribe<sensor_msgs::LaserScan> ("/base_scan", 100, &ScanToCloud::scanCallback, this);
-    point_cloud_publisher_ = node_.advertise<sensor_msgs::PointCloud> ("/cloud", 100, false);
-    tfListener_.setExtrapolationLimit(ros::Duration(0.1));
+    scan_sub_ = node_.subscribe<sensor_msgs::LaserScan> ("scan", 100, &ScanToCloud::scanCallback, this);
+    point_cloud_publisher_ = node_.advertise<sensor_msgs::PointCloud> ("cloud", 100, false);
+    tfListener_.setExtrapolationLimit(ros::Duration(0.5));
     
 }
 

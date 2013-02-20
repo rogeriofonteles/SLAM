@@ -5,33 +5,32 @@
 
 using namespace message_filters;
 
-OccupancyGridBuilder::OccupancyGridBuilder(ros::NodeHandle node){n = node;}
+OccupancyGridBuilder::OccupancyGridBuilder(ros::NodeHandle node){
+	n = node;
+	occGrid = new OccupancyGrid(0,0,0,100,100,1,0.1,0.1,1);
+}
 
 
 void OccupancyGridBuilder::initNode(){
 
-    message_filters::Subscriber<geometry_msgs::PointStamped> subscriberPose(n, "pose_corrected", 1);
+    message_filters::Subscriber<geometry_msgs::PoseWithCovarianceStamped> subscriberPose(n, "pose_corrected", 1);
     message_filters::Subscriber<sensor_msgs::PointCloud> subscriberCloud(n, "cloud", 1);
     
-    publisherMap = n.advertise<nav_msgs::OccupancyGrid>("pose_corrected", 50);
+    publisherMap = n.advertise<nav_msgs::OccupancyGrid>("map", 50);
     
-    typedef sync_policies::ExactTime<geometry_msgs::PointStamped, sensor_msgs::PointCloud> MySyncPolicy;
+    typedef sync_policies::ExactTime<geometry_msgs::PoseWithCovarianceStamped, sensor_msgs::PointCloud> MySyncPolicy;
     Synchronizer<MySyncPolicy> sync(MySyncPolicy(10), subscriberPose, subscriberCloud);
-    sync.registerCallback(boost::bind(&OccupancyGridBuilder::occCallback, this, _1, _2));
-    
-    occGrid = new OccupancyGrid(0,0,0,100,100,100,0.1,0.1,0.1);
-    
+    sync.registerCallback(boost::bind(&OccupancyGridBuilder::occCallback, this, _1, _2));   
 }
 
 
-void OccupancyGridBuilder::occCallback(const geometry_msgs::PointStamped::ConstPtr& poseMsg, const sensor_msgs::PointCloud::ConstPtr& cloudMsg){
+void OccupancyGridBuilder::occCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& poseMsg, const sensor_msgs::PointCloud::ConstPtr& cloudMsg){
 
     sensor_msgs::PointCloud tempCloud = *cloudMsg;
 
     for (size_t i = 0; i < tempCloud.points.size(); i++){
-        tempCloud.points[i].x += poseMsg->point.x;
-        tempCloud.points[i].y += poseMsg->point.y;
-        tempCloud.points[i].z += poseMsg->point.z;
+        tempCloud.points[i].x += poseMsg->pose.pose.position.x;
+        tempCloud.points[i].y += poseMsg->pose.pose.position.y;
     }
     
     occGrid->fillOccupancyGrid(tempCloud);

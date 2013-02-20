@@ -6,28 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/tempestade/Rogerio/SLAM/SLAM/src/OccupancyGrid.cpp
-OccupancyGrid.h
-/home/tempestade/Rogerio/SLAM/SLAM/src/OccupancyGrid.h
-ros/console.h
--
-
 /home/tempestade/Rogerio/SLAM/SLAM/src/OccupancyGrid.h
 pcl/point_cloud.h
 -
 pcl/point_types.h
 -
 sensor_msgs/PointCloud.h
--
-
-/home/tempestade/Rogerio/SLAM/SLAM/src/OccupancyGridBuilder.cpp
-OccupancyGridBuilder.h
-/home/tempestade/Rogerio/SLAM/SLAM/src/OccupancyGridBuilder.h
-message_filters/subscriber.h
--
-message_filters/synchronizer.h
--
-message_filters/sync_policies/exact_time.h
 -
 
 /home/tempestade/Rogerio/SLAM/SLAM/src/OccupancyGridBuilder.h
