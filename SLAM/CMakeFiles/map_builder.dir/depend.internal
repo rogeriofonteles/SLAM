@@ -235,29 +235,39 @@ CMakeFiles/map_builder.dir/src/OccupancyGridBuilder.o
  /opt/ros/fuerte/include/geometry_msgs/Point32.h
  /opt/ros/fuerte/include/geometry_msgs/PointStamped.h
  /opt/ros/fuerte/include/geometry_msgs/Pose.h
+ /opt/ros/fuerte/include/geometry_msgs/PoseStamped.h
  /opt/ros/fuerte/include/geometry_msgs/PoseWithCovariance.h
+ /opt/ros/fuerte/include/geometry_msgs/PoseWithCovarianceStamped.h
  /opt/ros/fuerte/include/geometry_msgs/Quaternion.h
+ /opt/ros/fuerte/include/geometry_msgs/QuaternionStamped.h
+ /opt/ros/fuerte/include/geometry_msgs/Transform.h
+ /opt/ros/fuerte/include/geometry_msgs/TransformStamped.h
  /opt/ros/fuerte/include/geometry_msgs/Twist.h
+ /opt/ros/fuerte/include/geometry_msgs/TwistStamped.h
  /opt/ros/fuerte/include/geometry_msgs/TwistWithCovariance.h
  /opt/ros/fuerte/include/geometry_msgs/Vector3.h
+ /opt/ros/fuerte/include/geometry_msgs/Vector3Stamped.h
  /opt/ros/fuerte/include/message_filters/connection.h
  /opt/ros/fuerte/include/message_filters/null_types.h
  /opt/ros/fuerte/include/message_filters/signal1.h
  /opt/ros/fuerte/include/message_filters/signal9.h
  /opt/ros/fuerte/include/message_filters/simple_filter.h
  /opt/ros/fuerte/include/message_filters/subscriber.h
- /opt/ros/fuerte/include/message_filters/sync_policies/exact_time.h
+ /opt/ros/fuerte/include/message_filters/sync_policies/approximate_time.h
  /opt/ros/fuerte/include/message_filters/synchronizer.h
- /opt/ros/fuerte/include/message_filters/time_synchronizer.h
  /opt/ros/fuerte/include/nav_msgs/MapMetaData.h
  /opt/ros/fuerte/include/nav_msgs/OccupancyGrid.h
  /opt/ros/fuerte/include/nav_msgs/Odometry.h
  /opt/ros/fuerte/include/pcl-1.5/pcl/PointIndices.h
  /opt/ros/fuerte/include/pcl-1.5/pcl/channel_properties.h
  /opt/ros/fuerte/include/pcl-1.5/pcl/cloud_properties.h
+ /opt/ros/fuerte/include/pcl-1.5/pcl/common/centroid.h
  /opt/ros/fuerte/include/pcl-1.5/pcl/common/common.h
  /opt/ros/fuerte/include/pcl-1.5/pcl/common/distances.h
+ /opt/ros/fuerte/include/pcl-1.5/pcl/common/impl/centroid.hpp
  /opt/ros/fuerte/include/pcl-1.5/pcl/common/impl/common.hpp
+ /opt/ros/fuerte/include/pcl-1.5/pcl/common/impl/transforms.hpp
+ /opt/ros/fuerte/include/pcl-1.5/pcl/common/transforms.h
  /opt/ros/fuerte/include/pcl-1.5/pcl/console/print.h
  /opt/ros/fuerte/include/pcl-1.5/pcl/exceptions.h
  /opt/ros/fuerte/include/pcl-1.5/pcl/for_each_type.h
@@ -268,11 +278,14 @@ CMakeFiles/map_builder.dir/src/OccupancyGridBuilder.o
  /opt/ros/fuerte/include/pcl-1.5/pcl/point_cloud.h
  /opt/ros/fuerte/include/pcl-1.5/pcl/point_traits.h
  /opt/ros/fuerte/include/pcl-1.5/pcl/point_types.h
+ /opt/ros/fuerte/include/pcl-1.5/pcl/ros/conversions.h
  /opt/ros/fuerte/include/pcl-1.5/pcl/ros/register_point_struct.h
  /opt/ros/fuerte/include/ros/advertise_options.h
  /opt/ros/fuerte/include/ros/advertise_service_options.h
  /opt/ros/fuerte/include/ros/assert.h
  /opt/ros/fuerte/include/ros/builtin_message_traits.h
+ /opt/ros/fuerte/include/ros/callback_queue.h
+ /opt/ros/fuerte/include/ros/callback_queue_interface.h
  /opt/ros/fuerte/include/ros/common.h
  /opt/ros/fuerte/include/ros/console.h
  /opt/ros/fuerte/include/ros/duration.h
@@ -322,13 +335,36 @@ CMakeFiles/map_builder.dir/src/OccupancyGridBuilder.o
  /opt/ros/fuerte/include/ros/wall_timer_options.h
  /opt/ros/fuerte/include/rosconsole/macros_generated.h
  /opt/ros/fuerte/include/sensor_msgs/ChannelFloat32.h
+ /opt/ros/fuerte/include/sensor_msgs/Image.h
  /opt/ros/fuerte/include/sensor_msgs/LaserScan.h
  /opt/ros/fuerte/include/sensor_msgs/PointCloud.h
  /opt/ros/fuerte/include/sensor_msgs/PointCloud2.h
  /opt/ros/fuerte/include/sensor_msgs/PointField.h
+ /opt/ros/fuerte/include/sensor_msgs/point_cloud_conversion.h
+ /opt/ros/fuerte/include/std_msgs/Empty.h
  /opt/ros/fuerte/include/std_msgs/Header.h
+ /opt/ros/fuerte/stacks/bullet/include/LinearMath/btMatrix3x3.h
+ /opt/ros/fuerte/stacks/bullet/include/LinearMath/btMinMax.h
+ /opt/ros/fuerte/stacks/bullet/include/LinearMath/btQuadWord.h
+ /opt/ros/fuerte/stacks/bullet/include/LinearMath/btQuaternion.h
+ /opt/ros/fuerte/stacks/bullet/include/LinearMath/btScalar.h
+ /opt/ros/fuerte/stacks/bullet/include/LinearMath/btTransform.h
+ /opt/ros/fuerte/stacks/bullet/include/LinearMath/btVector3.h
+ /opt/ros/fuerte/stacks/geometry/tf/include/tf/LinearMath/Matrix3x3.h
+ /opt/ros/fuerte/stacks/geometry/tf/include/tf/LinearMath/MinMax.h
+ /opt/ros/fuerte/stacks/geometry/tf/include/tf/LinearMath/Scalar.h
+ /opt/ros/fuerte/stacks/geometry/tf/include/tf/LinearMath/Transform.h
+ /opt/ros/fuerte/stacks/geometry/tf/include/tf/LinearMath/Vector3.h
+ /opt/ros/fuerte/stacks/geometry/tf/include/tf/exceptions.h
+ /opt/ros/fuerte/stacks/geometry/tf/include/tf/tf.h
+ /opt/ros/fuerte/stacks/geometry/tf/include/tf/time_cache.h
+ /opt/ros/fuerte/stacks/geometry/tf/include/tf/transform_datatypes.h
+ /opt/ros/fuerte/stacks/geometry/tf/include/tf/transform_listener.h
+ /opt/ros/fuerte/stacks/geometry/tf/msg_gen/cpp/include/tf/tfMessage.h
+ /opt/ros/fuerte/stacks/geometry/tf/srv_gen/cpp/include/tf/FrameGraph.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
+ /usr/include/eigen3/Eigen/Dense
  /usr/include/eigen3/Eigen/Eigen2Support
  /usr/include/eigen3/Eigen/Eigenvalues
  /usr/include/eigen3/Eigen/Geometry
@@ -517,9 +553,9 @@ CMakeFiles/map_builder.dir/src/main_map_builder.o
  /opt/ros/fuerte/include/XmlRpcValue.h
  /opt/ros/fuerte/include/geometry_msgs/Point.h
  /opt/ros/fuerte/include/geometry_msgs/Point32.h
- /opt/ros/fuerte/include/geometry_msgs/PointStamped.h
  /opt/ros/fuerte/include/geometry_msgs/Pose.h
  /opt/ros/fuerte/include/geometry_msgs/PoseWithCovariance.h
+ /opt/ros/fuerte/include/geometry_msgs/PoseWithCovarianceStamped.h
  /opt/ros/fuerte/include/geometry_msgs/Quaternion.h
  /opt/ros/fuerte/include/geometry_msgs/Twist.h
  /opt/ros/fuerte/include/geometry_msgs/TwistWithCovariance.h
@@ -530,9 +566,8 @@ CMakeFiles/map_builder.dir/src/main_map_builder.o
  /opt/ros/fuerte/include/message_filters/signal9.h
  /opt/ros/fuerte/include/message_filters/simple_filter.h
  /opt/ros/fuerte/include/message_filters/subscriber.h
- /opt/ros/fuerte/include/message_filters/sync_policies/exact_time.h
+ /opt/ros/fuerte/include/message_filters/sync_policies/approximate_time.h
  /opt/ros/fuerte/include/message_filters/synchronizer.h
- /opt/ros/fuerte/include/message_filters/time_synchronizer.h
  /opt/ros/fuerte/include/nav_msgs/MapMetaData.h
  /opt/ros/fuerte/include/nav_msgs/OccupancyGrid.h
  /opt/ros/fuerte/include/nav_msgs/Odometry.h

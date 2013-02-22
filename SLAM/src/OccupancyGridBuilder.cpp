@@ -1,39 +1,55 @@
 #include "OccupancyGridBuilder.h"
-#include <message_filters/subscriber.h>
-#include <message_filters/synchronizer.h>
-#include <message_filters/sync_policies/exact_time.h>
+#include <tf/transform_listener.h>
+#include <Eigen/Dense>
+#include <iostream>
+#include <pcl/point_cloud.h>
+#include <pcl/common/transforms.h>
+#include <sensor_msgs/point_cloud_conversion.h>
+#include <pcl/ros/conversions.h>
 
-using namespace message_filters;
 
 OccupancyGridBuilder::OccupancyGridBuilder(ros::NodeHandle node){
 	n = node;
-	occGrid = new OccupancyGrid(0,0,0,100,100,1,0.1,0.1,1);
+	occGrid = new OccupancyGrid(0,0,0,10,10,1,0.01,0.01,1);
 }
 
 
 void OccupancyGridBuilder::initNode(){
 
-    message_filters::Subscriber<geometry_msgs::PoseWithCovarianceStamped> subscriberPose(n, "pose_corrected", 1);
-    message_filters::Subscriber<sensor_msgs::PointCloud> subscriberCloud(n, "cloud", 1);
+    subscriberPose = new message_filters::Subscriber<geometry_msgs::PoseWithCovarianceStamped>(n, "pose_corrected", 1);
+    subscriberCloud = new message_filters::Subscriber<sensor_msgs::PointCloud2>(n, "cloud", 1);
     
-    publisherMap = n.advertise<nav_msgs::OccupancyGrid>("map", 50);
+    publisherMap = n.advertise<nav_msgs::OccupancyGrid>("map", 50);    
     
-    typedef sync_policies::ExactTime<geometry_msgs::PoseWithCovarianceStamped, sensor_msgs::PointCloud> MySyncPolicy;
-    Synchronizer<MySyncPolicy> sync(MySyncPolicy(10), subscriberPose, subscriberCloud);
-    sync.registerCallback(boost::bind(&OccupancyGridBuilder::occCallback, this, _1, _2));   
+    sync = new Synchronizer<MySyncPolicy>(MySyncPolicy(10), *subscriberPose, *subscriberCloud);
+    sync->registerCallback(boost::bind(&OccupancyGridBuilder::occCallback, this, _1, _2));   
 }
 
 
-void OccupancyGridBuilder::occCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& poseMsg, const sensor_msgs::PointCloud::ConstPtr& cloudMsg){
+void OccupancyGridBuilder::occCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& poseMsg, const sensor_msgs::PointCloud2::ConstPtr& cloudMsg){
 
-    sensor_msgs::PointCloud tempCloud = *cloudMsg;
+	ROS_INFO("Occupancy Grid Callback");
 
-    for (size_t i = 0; i < tempCloud.points.size(); i++){
-        tempCloud.points[i].x += poseMsg->pose.pose.position.x;
-        tempCloud.points[i].y += poseMsg->pose.pose.position.y;
-    }
+    sensor_msgs::PointCloud2 cloudTransf2ROS;
+    sensor_msgs::PointCloud cloudTransfROS, cloudTemp;
     
-    occGrid->fillOccupancyGrid(tempCloud);
+    sensor_msgs::convertPointCloud2ToPointCloud(*cloudMsg, cloudTemp);
+    
+    Eigen::Quaternionf q(poseMsg->pose.pose.orientation.x, poseMsg->pose.pose.orientation.y, poseMsg->pose.pose.orientation.z, poseMsg->pose.pose.orientation.w);
+    
+    Eigen::Vector3f t(poseMsg->pose.pose.position.x, poseMsg->pose.pose.position.y, 0.0);
+
+    pcl::PointCloud<pcl::PointXYZ> cloud, cloudTransf;
+    pcl::fromROSMsg (*cloudMsg, cloud);
+
+	pcl::transformPointCloud(cloud, cloudTransf, t, q);
+	
+	pcl::toROSMsg(cloudTransf, cloudTransf2ROS);
+	sensor_msgs::convertPointCloud2ToPointCloud(cloudTransf2ROS, cloudTransfROS);
+    
+    std::cout << cloudTemp.points[0] << " " << cloudTransfROS.points[0] << std::endl;
+    
+    occGrid->fillOccupancyGrid(cloudTransfROS);
     
     nav_msgs::OccupancyGrid map;    
     map.info.map_load_time = cloudMsg->header.stamp;
@@ -47,9 +63,13 @@ void OccupancyGridBuilder::occCallback(const geometry_msgs::PoseWithCovarianceSt
     
     map.info.origin = pose;
     int8_t *data = occGrid->getData();
-    map.data.assign(data, data+sizeof(data));
+    int nCells = occGrid->nX() * occGrid->nY() * occGrid->nZ(); 
+    map.data.resize(nCells);
+    for (int i=0; i<nCells; i++) map.data[i] = data[i];
     
     publisherMap.publish(map);       
+    
+    ROS_INFO("Fim Occupancy Grid Callback");
     
 }
 

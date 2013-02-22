@@ -23,6 +23,7 @@ class OccupancyGrid
          unsigned int nZ();
 
          int8_t* getData();
+         int occupied;
 
      private:
          unsigned int nx_, ny_, nz_;
@@ -30,7 +31,8 @@ class OccupancyGrid
          float center_x_, center_y_, center_z_;
          float res_x_, res_y_, res_z_;
          int8_t *data_;
- };
+         
+};
  
  
  #endif

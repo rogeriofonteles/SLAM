@@ -1,11 +1,13 @@
 #include "OccupancyGrid.h"
 #include <ros/console.h>
+#include <iostream>
 
 OccupancyGrid::OccupancyGrid(float center_x, float center_y, float center_z,
                              float size_x, float size_y, float size_z,
                              float res_x, float res_y, float res_z)
 {
     nx_ = int (size_x / res_x + 0.5);
+    std::cout << nx_ << std::endl;
     ny_ = int (size_y / res_y + 0.5);
     nz_ = int (size_z / res_z + 0.5);
     res_x_ = res_x; 
@@ -23,6 +25,8 @@ OccupancyGrid::OccupancyGrid(float center_x, float center_y, float center_z,
     data_ = new int8_t[nx_ * ny_ * nz_];
     for(unsigned int i = 0; i < nx_ * ny_ *nz_; i++)
         data_[i] = 0;
+        
+    occupied = 0;
 }
 
 OccupancyGrid::~OccupancyGrid()
@@ -52,6 +56,7 @@ int8_t* OccupancyGrid::getData()
 
 void OccupancyGrid::fillOccupancyGrid(const sensor_msgs::PointCloud cloud)
 {
+
     float x, y, z;
     int idx_x, idx_y, idx_z;
     float min_x = center_x_ - size_x_ / 2;
@@ -59,7 +64,7 @@ void OccupancyGrid::fillOccupancyGrid(const sensor_msgs::PointCloud cloud)
     float min_z = center_z_ - size_z_ / 2;
 
     for (size_t i = 0; i < cloud.points.size(); i++)
-    {
+    {    	
         x = cloud.points[i].x;
         y = cloud.points[i].y;
         z = cloud.points[i].z;
@@ -67,11 +72,14 @@ void OccupancyGrid::fillOccupancyGrid(const sensor_msgs::PointCloud cloud)
         idx_x = int( (x - min_x) / res_x_ + 0.5);
         idx_y = int( (y - min_y) / res_y_ + 0.5);
         idx_z = int( (z - min_z) / res_z_ + 0.5);
+        
+        //std::cout << idx_x << " " << idx_y << " " << idx_z << std::endl;
 
         if (idx_x >= 0 and idx_x < (int)nx_ and idx_y >= 0 and 
-            idx_y < (int)ny_ and idx_z >= 0 and idx_z < (int)nz_ and
-            data_[idx_x * nz_ * ny_ + idx_y * nz_ + idx_z] == 0)
-            data_[idx_x * nz_ * ny_ + idx_y * nz_ + idx_z] += 1;
+            idx_y < (int)ny_ and data_[idx_y * nx_ + idx_x] == 0){
+            	data_[idx_x * nz_ * ny_ + idx_y * nz_ + idx_z] += 1;
+            	occupied++;
+        }
     }
 }
 
