@@ -31,13 +31,14 @@ void OccupancyGridBuilder::occCallback(const geometry_msgs::PoseWithCovarianceSt
 	ROS_INFO("Occupancy Grid Callback");
 
     sensor_msgs::PointCloud2 cloudTransf2ROS;
-    sensor_msgs::PointCloud cloudTransfROS, cloudTemp;
+    sensor_msgs::PointCloud cloudTransfROS, cloudTemp, cloudTest;
     
     sensor_msgs::convertPointCloud2ToPointCloud(*cloudMsg, cloudTemp);
     
     Eigen::Quaternionf q(poseMsg->pose.pose.orientation.x, poseMsg->pose.pose.orientation.y, poseMsg->pose.pose.orientation.z, poseMsg->pose.pose.orientation.w);
     
-    Eigen::Vector3f t(poseMsg->pose.pose.position.x, poseMsg->pose.pose.position.y, 0.0);
+    //Eigen::Vector3f t(4, 3, 0.0);
+    Eigen::Vector3f t(poseMsg->pose.pose.position.x*0.01, poseMsg->pose.pose.position.y*0.01, 0.0);
 
     pcl::PointCloud<pcl::PointXYZ> cloud, cloudTransf;
     pcl::fromROSMsg (*cloudMsg, cloud);
@@ -46,10 +47,10 @@ void OccupancyGridBuilder::occCallback(const geometry_msgs::PoseWithCovarianceSt
 	
 	pcl::toROSMsg(cloudTransf, cloudTransf2ROS);
 	sensor_msgs::convertPointCloud2ToPointCloud(cloudTransf2ROS, cloudTransfROS);
-    
-    std::cout << cloudTemp.points[0] << " " << cloudTransfROS.points[0] << std::endl;
+	//sensor_msgs::convertPointCloud2ToPointCloud(*cloudMsg, cloudTest);
     
     occGrid->fillOccupancyGrid(cloudTransfROS);
+    occGrid->fillOccupancyGrid(cloudTest);
     
     nav_msgs::OccupancyGrid map;    
     map.info.map_load_time = cloudMsg->header.stamp;
