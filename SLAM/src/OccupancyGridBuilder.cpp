@@ -10,7 +10,7 @@
 
 OccupancyGridBuilder::OccupancyGridBuilder(ros::NodeHandle node){
 	n = node;
-	occGrid = new OccupancyGrid(0,0,0,10,10,1,0.01,0.01,1);
+	occGrid = new OccupancyGrid(0,0,0,30,30,1,0.01,0.01,1);
 }
 
 
@@ -38,7 +38,7 @@ void OccupancyGridBuilder::occCallback(const geometry_msgs::PoseWithCovarianceSt
     Eigen::Quaternionf q(poseMsg->pose.pose.orientation.x, poseMsg->pose.pose.orientation.y, poseMsg->pose.pose.orientation.z, poseMsg->pose.pose.orientation.w);
     
     //Eigen::Vector3f t(4, 3, 0.0);
-    Eigen::Vector3f t(poseMsg->pose.pose.position.x*0.01, poseMsg->pose.pose.position.y*0.01, 0.0);
+    Eigen::Vector3f t(poseMsg->pose.pose.position.x, poseMsg->pose.pose.position.y, 0.0);
 
     pcl::PointCloud<pcl::PointXYZ> cloud, cloudTransf;
     pcl::fromROSMsg (*cloudMsg, cloud);
@@ -50,7 +50,7 @@ void OccupancyGridBuilder::occCallback(const geometry_msgs::PoseWithCovarianceSt
 	//sensor_msgs::convertPointCloud2ToPointCloud(*cloudMsg, cloudTest);
     
     occGrid->fillOccupancyGrid(cloudTransfROS);
-    occGrid->fillOccupancyGrid(cloudTest);
+    //occGrid->fillOccupancyGrid(cloudTest);
     
     nav_msgs::OccupancyGrid map;    
     map.info.map_load_time = cloudMsg->header.stamp;

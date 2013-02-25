@@ -102,17 +102,17 @@ void Slam::ekfSlam(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& odo
             }
         }
 
-        for(std::vector<InterestPoint*>::iterator it=features.begin(); it != features.end(); it++){
+		vector<double> delta_curr(2);
+        delta_curr[0] = (*it2)->getPosition().x - odom->pose.pose.position.x;
+        delta_curr[1] = (*it2)->getPosition().y - odom->pose.pose.position.y;     
+        
+        double q = inner_prod(delta_curr, delta_curr);
+        
+        vector<double> z(2);
+        z[0] = sqrt(q);
+        z[1] = atan2(delta_curr[1],delta_curr[0]) - yaw;   
 
-            vector<double> delta_curr(2);
-            delta_curr[0] = (*it2)->getPosition().x - odom->pose.pose.position.x;
-            delta_curr[1] = (*it2)->getPosition().y - odom->pose.pose.position.y;     
-            
-            double q = inner_prod(delta_curr, delta_curr);
-            
-            vector<double> z(2);
-            z[0] = sqrt(q);
-            z[1] = atan2(delta_curr[1],delta_curr[0]) - yaw;                 
+        for(std::vector<InterestPoint*>::iterator it=features.begin(); it != features.end(); it++){
 
             vector<double> delta(2);
             delta[0] = (*it)->getPosition().x - odom->pose.pose.position.x;
@@ -187,11 +187,32 @@ void Slam::ekfSlam(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& odo
         matrix<double> temp_m2 = prod(result.second, trans(H_real)); 
         matrix<double> K = prod(temp_m2, inverse(Psi_real));
 
-        result.first = result.first + prod(K,z_diff_real);
-        std::cout << result.first << std::endl;
-        result.second = prod((identity_matrix<double>(result.first.size(), result.first.size()) - prod(K,H_real)),result.second);
+        if(counter_real == features.size()){
+        	result.first[result.first.size()-3] = (*it2)->getPosition().x;
+        	result.first[result.first.size()-2] = (*it2)->getPosition().y;
+        	result.first[result.first.size()-1] = z_diff_real;
+        	
+        	matrix<double> J_r(3,3);
+        	
+        	J_r(0,0) = 1; 	J_r(0,1) = 0;   J_r(0,2) = -sin(z[2]+yaw)*z[1];
+        	J_r(1,0) = 0; 	J_r(1,1) = 1;   J_r(1,2) = cos(z[2]+yaw)*z[1];
+        	J_r(2,0) = 0;   J_r(2,1) = 0;   J_r(2,2) = 1;
+        	
+        	matrix<double> J_l(3,3);
+        	
+        	J_l(0,0) = cos(z[2]+yaw); 	J_l(0,1) = -sin(z[2]+yaw)*z[1];   J_l(0,2) = 0;
+        	J_l(1,0) = sin(z[2]+yaw); 	J_l(1,1) = cos(z[2]+yaw)*z[1];    J_l(1,2) = 0;
+        	J_l(2,0) = 0;               J_l(2,1) = 0;                     J_l(2,2) = 1;
+        	
+        	        	
+        	
+        	
+        }        
+        else if(counter_real != features.size()){
+        	result.first = result.first + prod(K,z_diff_real);
+		    std::cout << result.first << std::endl;
+		    result.second = prod((identity_matrix<double>(result.first.size(), result.first.size()) - prod(K,H_real)),result.second);
         
-        if(counter_real != features.size()){
             features.pop_back();
             result.first.resize(result.first.size() - 3);
             result.second.resize(result.second.size1() - 3, result.second.size2() - 3);            
