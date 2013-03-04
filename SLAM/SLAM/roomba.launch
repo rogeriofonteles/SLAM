@@ -1,0 +1,22 @@
+<launch>
+
+  <include file="$(find turtlebot_bringup)/minimal.launch" />
+
+  <!-- HOKUYO -->  
+  <node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node" output="screen">
+    <param name="frame_id" value="base_laser" />
+  </node>
+  
+  <node pkg="SLAM" type="laser_to_base" name="laser_to_base" output="screen">
+  </node>
+  
+    <node pkg="SLAM" type="map_builder" name="map_builder" output="screen">
+  </node>
+  
+    <node pkg="SLAM" type="scan_to_cloud" name="scan_to_cloud" output="screen">
+  </node>
+  
+    <node pkg="SLAM" type="slam" name="slam" output="screen">
+  </node> 
+  
+</launch>

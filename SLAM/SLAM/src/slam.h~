@@ -1,0 +1,45 @@
+#ifndef SLAM_H
+#define SLAM_H
+
+#include <ros/ros.h>
+#include <message_filters/subscriber.h>
+#include <message_filters/time_synchronizer.h>
+#include <nav_msgs/Odometry.h>
+#include <geometry_msgs/Point.h>
+#include <sensor_msgs/LaserScan.h>
+#include <boost/numeric/ublas/matrix.hpp>
+#include <utility>
+
+using namespace boost::numeric::ublas;
+
+typedef std::pair<vector<double>,matrix<double>> Gaussian;
+
+class Feature{
+
+    public:
+        geometry_msgs::Point position;
+        double bearing;
+        double signature;
+
+};
+
+class Slam{
+
+    public:
+        message_filters::Subscriber<nav_msgs::Odometry> subscriberOdom;
+        message_filters::Subscriber<sensor_msgs::LaserScan> subscriberLaser;
+    
+        void initNode();
+    
+        void slamCallback(const sensor_msgs::LaserScan::ConstPtr&, const nav_msgs::Odometry::ConstPtr&);
+        void ekfSlam(sensor_msgs::PointCloud, nav_msgs::Odometry);
+        
+        
+    private:
+        sensor_msgs::PointCloud pastCloud;                 
+        nav_msgs::Odometry pastOdom;
+        
+        Gaussian result;
+};
+
+#endif
