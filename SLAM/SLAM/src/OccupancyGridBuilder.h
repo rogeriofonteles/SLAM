@@ -11,7 +11,7 @@
 #include <boost/numeric/ublas/matrix.hpp>
 #include <message_filters/subscriber.h>
 #include <message_filters/synchronizer.h>
-#include <message_filters/sync_policies/approximate_time.h>
+#include <message_filters/sync_policies/exact_time.h>
 #include "OccupancyGrid.h"
 #include <utility>
 
@@ -19,7 +19,7 @@ using namespace boost::numeric::ublas;
 using namespace message_filters;
 
 typedef std::pair<vector<double>,matrix<double> > Gaussian;
-typedef sync_policies::ApproximateTime<geometry_msgs::PoseWithCovarianceStamped, sensor_msgs::PointCloud2> MySyncPolicy;
+typedef sync_policies::ExactTime<geometry_msgs::PoseWithCovarianceStamped, sensor_msgs::PointCloud2> MySyncPolicy;
 
 class OccupancyGridBuilder{
 

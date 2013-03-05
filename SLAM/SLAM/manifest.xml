@@ -15,6 +15,9 @@
   <depend package="tf"/>
   <depend package="pcl"/>
   <depend package="laser_geometry"/>
+  <depend package="move_base_msgs"/>
+  <depend package="actionlib"/>
+  
 
 </package>
 

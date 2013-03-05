@@ -3,6 +3,7 @@
 /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles/ROSBUILD_gensrv_cpp.dir
 /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles/ROSBUILD_gensrv_lisp.dir
 /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles/clean-test-results.dir
+/home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles/expl.dir
 /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles/laser_to_base.dir
 /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles/map_builder.dir
 /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles/rosbuild_precompile.dir

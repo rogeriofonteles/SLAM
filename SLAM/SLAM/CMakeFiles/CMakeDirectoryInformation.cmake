@@ -20,6 +20,8 @@ SET(CMAKE_C_INCLUDE_PATH
   "/opt/ros/fuerte/include/pcl-1.5"
   "/usr/local/include/eigen3"
   "/opt/ros/fuerte/stacks/laser_pipeline/laser_geometry/include"
+  "/opt/ros/fuerte/stacks/navigation/move_base_msgs/msg_gen/cpp/include"
+  "/opt/ros/fuerte/share/actionlib/include"
   )
 SET(CMAKE_CXX_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})
 SET(CMAKE_Fortran_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})

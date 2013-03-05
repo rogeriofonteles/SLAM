@@ -29,7 +29,9 @@ rosbuild_add_boost_directories()
 #rosbuild_add_executable(example examples/example.cpp)
 #target_link_libraries(example ${PROJECT_NAME})
 
-rosbuild_add_executable(slam src/main_slam.cpp src/Slam.cpp src/flirt/feature/*.cpp src/flirt/geometry/*.cpp src/flirt/sensors/*.cpp src/flirt/utils/*.cpp)
+file(GLOB SLAM_SOURCES src/flirt/feature/*.cpp src/flirt/geometry/*.cpp src/flirt/sensors/*.cpp src/flirt/utils/*.cpp)
+
+rosbuild_add_executable(slam src/main_slam.cpp src/Slam.cpp ${SLAM_SOURCES})
 rosbuild_add_executable(scan_to_cloud src/main_scan_to_cloud.cpp src/ScanToCloud.cpp)
 rosbuild_add_executable(laser_to_base src/base_laser_tf_publisher.cpp)
 rosbuild_add_executable(map_builder src/main_map_builder.cpp src/OccupancyGridBuilder.cpp src/OccupancyGrid.cpp)

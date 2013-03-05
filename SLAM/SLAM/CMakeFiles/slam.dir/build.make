@@ -69,8 +69,13 @@ CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
 CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/share/pcl/manifest.xml
 CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/stacks/common_rosdeps/manifest.xml
 CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/stacks/laser_pipeline/laser_geometry/manifest.xml
+CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/share/roslib/manifest.xml
+CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/share/actionlib_msgs/manifest.xml
+CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/stacks/navigation/move_base_msgs/manifest.xml
+CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/share/actionlib/manifest.xml
 CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
+CMakeFiles/slam.dir/src/main_slam.o: /opt/ros/fuerte/stacks/navigation/move_base_msgs/msg_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/main_slam.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/main_slam.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/main_slam.cpp
@@ -112,8 +117,13 @@ CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/share/pcl/manifest.xml
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/stacks/common_rosdeps/manifest.xml
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/stacks/laser_pipeline/laser_geometry/manifest.xml
+CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/share/roslib/manifest.xml
+CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/share/actionlib_msgs/manifest.xml
+CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/stacks/navigation/move_base_msgs/manifest.xml
+CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/share/actionlib/manifest.xml
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
+CMakeFiles/slam.dir/src/Slam.o: /opt/ros/fuerte/stacks/navigation/move_base_msgs/msg_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rogerio/ros_workspace/SLAM/SLAM/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam.dir/src/Slam.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/slam.dir/src/Slam.o -c /home/rogerio/ros_workspace/SLAM/SLAM/src/Slam.cpp

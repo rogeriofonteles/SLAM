@@ -164,6 +164,19 @@ clean-test-results/fast:
 .PHONY : clean-test-results/fast
 
 #=============================================================================
+# Target rules for targets named expl
+
+# Build rule for target.
+expl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 expl
+.PHONY : expl
+
+# fast build rule for target.
+expl/fast:
+	$(MAKE) -f CMakeFiles/expl.dir/build.make CMakeFiles/expl.dir/build
+.PHONY : expl/fast
+
+#=============================================================================
 # Target rules for targets named laser_to_base
 
 # Build rule for target.
@@ -706,6 +719,21 @@ src/flirt/utils/SimplePeakFinder.s:
 .PHONY : src/flirt/utils/SimplePeakFinder.s
 
 # target to build an object file
+src/main_exploration.o:
+	$(MAKE) -f CMakeFiles/expl.dir/build.make CMakeFiles/expl.dir/src/main_exploration.o
+.PHONY : src/main_exploration.o
+
+# target to preprocess a source file
+src/main_exploration.i:
+	$(MAKE) -f CMakeFiles/expl.dir/build.make CMakeFiles/expl.dir/src/main_exploration.i
+.PHONY : src/main_exploration.i
+
+# target to generate assembly for a file
+src/main_exploration.s:
+	$(MAKE) -f CMakeFiles/expl.dir/build.make CMakeFiles/expl.dir/src/main_exploration.s
+.PHONY : src/main_exploration.s
+
+# target to build an object file
 src/main_map_builder.o:
 	$(MAKE) -f CMakeFiles/map_builder.dir/build.make CMakeFiles/map_builder.dir/src/main_map_builder.o
 .PHONY : src/main_map_builder.o
@@ -762,6 +790,7 @@ help:
 	@echo "... ROSBUILD_gensrv_lisp"
 	@echo "... clean-test-results"
 	@echo "... edit_cache"
+	@echo "... expl"
 	@echo "... laser_to_base"
 	@echo "... map_builder"
 	@echo "... rebuild_cache"
@@ -849,6 +878,9 @@ help:
 	@echo "... src/flirt/utils/SimplePeakFinder.o"
 	@echo "... src/flirt/utils/SimplePeakFinder.i"
 	@echo "... src/flirt/utils/SimplePeakFinder.s"
+	@echo "... src/main_exploration.o"
+	@echo "... src/main_exploration.i"
+	@echo "... src/main_exploration.s"
 	@echo "... src/main_map_builder.o"
 	@echo "... src/main_map_builder.i"
 	@echo "... src/main_map_builder.s"

@@ -233,8 +233,8 @@ void Slam::ekfSlam(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& odo
         	matrix<double> temp_mult2 = prod(J_l, Q);
         	project(result.second, r, r) = prod(temp_mult, trans(J_r)) + prod(temp_mult2, trans(J_l));
         	
-        	project(result.second, r2, r4) = prod(J_r, project(result.second, r2, r3));
-        	project(result.second, r4, r2) = trans(prod(J_r, project(result.second, r, r)));
+        	project(result.second, r, r4) = prod(J_r, project(result.second, r2, r3));
+        	project(result.second, r4, r) = trans(prod(J_r, project(result.second, r, r)));
         	
         }        
         else if(counter_real != features.size()){
@@ -345,7 +345,11 @@ void Slam::slamCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr
     pose.pose.pose.orientation.w = q.w();*/
     
     //publisherResult.publish(pose);
-    publisherResult.publish(odomMsg);  
+    
+    geometry_msgs::PoseWithCovarianceStamped newOdomMsg(*odomMsg);
+    newOdomMsg->header.stamp = laserMsg->header.stamp;
+    
+    publisherResult.publish(newOdomMsg);  
     
     ROS_INFO("Fim Slam Callback");  
     

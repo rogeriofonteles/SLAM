@@ -269,7 +269,7 @@ CMakeFiles/map_builder.dir/src/OccupancyGridBuilder.o: /opt/ros/fuerte/include/m
 CMakeFiles/map_builder.dir/src/OccupancyGridBuilder.o: /opt/ros/fuerte/include/message_filters/signal9.h
 CMakeFiles/map_builder.dir/src/OccupancyGridBuilder.o: /opt/ros/fuerte/include/message_filters/simple_filter.h
 CMakeFiles/map_builder.dir/src/OccupancyGridBuilder.o: /opt/ros/fuerte/include/message_filters/subscriber.h
-CMakeFiles/map_builder.dir/src/OccupancyGridBuilder.o: /opt/ros/fuerte/include/message_filters/sync_policies/approximate_time.h
+CMakeFiles/map_builder.dir/src/OccupancyGridBuilder.o: /opt/ros/fuerte/include/message_filters/sync_policies/exact_time.h
 CMakeFiles/map_builder.dir/src/OccupancyGridBuilder.o: /opt/ros/fuerte/include/message_filters/synchronizer.h
 CMakeFiles/map_builder.dir/src/OccupancyGridBuilder.o: /opt/ros/fuerte/include/nav_msgs/MapMetaData.h
 CMakeFiles/map_builder.dir/src/OccupancyGridBuilder.o: /opt/ros/fuerte/include/nav_msgs/OccupancyGrid.h
@@ -599,7 +599,7 @@ CMakeFiles/map_builder.dir/src/main_map_builder.o: /opt/ros/fuerte/include/messa
 CMakeFiles/map_builder.dir/src/main_map_builder.o: /opt/ros/fuerte/include/message_filters/signal9.h
 CMakeFiles/map_builder.dir/src/main_map_builder.o: /opt/ros/fuerte/include/message_filters/simple_filter.h
 CMakeFiles/map_builder.dir/src/main_map_builder.o: /opt/ros/fuerte/include/message_filters/subscriber.h
-CMakeFiles/map_builder.dir/src/main_map_builder.o: /opt/ros/fuerte/include/message_filters/sync_policies/approximate_time.h
+CMakeFiles/map_builder.dir/src/main_map_builder.o: /opt/ros/fuerte/include/message_filters/sync_policies/exact_time.h
 CMakeFiles/map_builder.dir/src/main_map_builder.o: /opt/ros/fuerte/include/message_filters/synchronizer.h
 CMakeFiles/map_builder.dir/src/main_map_builder.o: /opt/ros/fuerte/include/nav_msgs/MapMetaData.h
 CMakeFiles/map_builder.dir/src/main_map_builder.o: /opt/ros/fuerte/include/nav_msgs/OccupancyGrid.h

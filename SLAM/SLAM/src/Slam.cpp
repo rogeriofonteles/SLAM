@@ -345,7 +345,11 @@ void Slam::slamCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr
     pose.pose.pose.orientation.w = q.w();*/
     
     //publisherResult.publish(pose);
-    publisherResult.publish(odomMsg);  
+    
+    geometry_msgs::PoseWithCovarianceStamped newOdomMsg(*odomMsg);
+    newOdomMsg.header.stamp = laserMsg->header.stamp;
+    
+    publisherResult.publish(newOdomMsg);  
     
     ROS_INFO("Fim Slam Callback");  
     
