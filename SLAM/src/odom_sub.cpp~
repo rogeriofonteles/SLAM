@@ -1,0 +1,27 @@
+#include "ros/ros.h"
+#include <message_filters/subscriber.h>
+#include <message_filters/time_synchronizer.h>
+#include <nav_msgs/Odometry.h>
+#include <sensor_msgs/LaserScan.h>
+
+/**
+ * This tutorial demonstrates simple receipt of messages over the ROS system.
+ */
+void slamCallback(const nav_msgs::Odometry::ConstPtr& odomMsg, const sensor_msgs::LaserScan::ConstPtr& laserMsg){
+  ROS_INFO("ODOM");
+}
+
+
+int main(int argc, char **argv)
+{
+
+  ros::init(argc, argv, "listener");
+  ros::NodeHandle n; //Listener
+
+  message_filters::Subscriber<nav_msgs::Odometry> subscriberOdom = n.subscribe(n, "odom", 1);
+  message_filters::Subscriber<sensor_msgs::LaserScan> subscriberLaser = n.subscribe(n, "base_scan", 1);
+  
+  ros::spin();
+
+  return 0;
+}
